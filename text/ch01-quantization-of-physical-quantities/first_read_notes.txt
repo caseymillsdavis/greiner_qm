@@ -1,0 +1,17 @@
+Here are some questions/comments as I re-read the text and the notes:
+
+1. We might be missing some of the introduction information from the first 3 paragraphs of chapter 1 under the heading Lichtquanten. It makes mention not just of the crises of the wave theory but that both are need - "je nach Fragestellung", that we now live with a "Dualismus des Lichts".
+2. I think we failed to mention that the Austrittsarbeit is a property of the type of metal.
+3. It is assert that the light quantum that must be supplied in accordance with the photoelectric effect, moves at the speed of light. Why "must" this be the case?
+4. We use the phrase "massless dispersion relation" - that may need clarification.
+5. There's a rendering issue with "Move the photon terms to the left in (2$\parallel$),"
+6. The latex following "Now use the relativistic identity (valid for any speed)" seems to have a comma separating perhaps two equations. Only the second has an equals sign and hence the meaning of the first is uncleear.
+7. A few of the quations, which appear on their own line, begin with a comma or a semilcolon, which must be incorrect.
+8. Ah yes, equation 1.5 also has a comma in the middle like the equation I mentioned in item 6 above. These stray commans are the common issue.
+9. That the compton wavelength of a particle "can be read as a measure of the particle's spatial extent" is a bit vague and could use some expansion. It's a tantalizing statement. Please say a bit more.
+10. Say a bit more about what the "compton line" refers to.
+11. The text makes mentionn of "Impulsverteilungen der Elektronen" - can you explicitly clarify this.
+12. It would be fantastic if we could snip the figures from the text and include them in the markdown appropriately. Consider this a P2 as I'm not sure how much effort it is.
+13. In discussing The Ritz combination principle, mention of " light emitted by atoms " is made. But why or how do atoms emit light? Do they need to be excited? Perhaps this clarification takes us too far afield. 
+14. You emphasize the directness of the Franck–Hertz experiments. Is this in contrast to an earlier experiment discussed?
+15. 
