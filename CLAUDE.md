@@ -36,6 +36,12 @@ When given one or more screenshots from the text:
 - **Math is LaTeX**, rendered by GitHub: `$...$` inline, `$$...$$` for display.
   Use `\hat{}` for operators, standard QM notation (`\langle\psi|\phi\rangle`,
   `\nabla^2`, `\hbar`, etc.).
+- **Do not use `\tag{}`** for equation numbers — GitHub's MathJax renders it
+  unreliably (equations collapse into a vertical stack). Instead append the
+  number inline at the end of the equation, e.g. `... \qquad (1.2)`, using only
+  plain characters inside the label. **Never put `$` inside a `$$...$$` block**
+  (e.g. `\tag{2$\perp$}`) — the nested delimiter desyncs the parser. For symbol
+  labels use bare math like `(2\parallel)`, `(2\perp)`, `(\ast)`.
 - Number or label key results so they can be cross-referenced.
 - When a screenshot maps to a note section, reference the source file, e.g.
   `<!-- source: source/sec-2.3-p045.png -->`.

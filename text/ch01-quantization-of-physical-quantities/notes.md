@@ -52,8 +52,7 @@ The proportionality constant — read off as the slope of the line — is **Plan
 quantum of action** $h$ (or $\hbar = h/2\pi$):
 
 $$
-\boxed{\,E = \hbar(\omega - \omega_A) = h(\nu - \nu_A)\,}
-\tag{1.1}
+\boxed{\,E = \hbar(\omega - \omega_A) = h(\nu - \nu_A)\,} \qquad (1.1)
 $$
 
 with
@@ -79,8 +78,7 @@ Einstein (1905) explained this by proposing that light of frequency $\omega$
 consists of discrete **light quanta (photons)**, each carrying energy
 
 $$
-E_{\text{photon}} = \hbar\omega.
-\tag{1.2}
+E_{\text{photon}} = \hbar\omega \qquad (1.2)
 $$
 
 A single photon ejects a single electron: it spends $W_A=\hbar\omega_A$ on
@@ -102,8 +100,7 @@ A light quantum moves at the speed of light $c$. In special relativity a
 particle's total energy and momentum obey
 
 $$
-E^2 = (m_0 c^2)^2 + p^2 c^2.
-\tag{1.3}
+E^2 = (m_0 c^2)^2 + p^2 c^2 \qquad (1.3)
 $$
 
 For the photon $E = \hbar\omega$, and travelling at $c$ forces its **rest mass
@@ -112,8 +109,7 @@ $\hbar\omega = pc$. Writing the frequency through the wavenumber, $\omega = c k$
 (with $k = 2\pi/\lambda$), gives
 
 $$
-\boxed{\,p = \hbar k\,}\qquad\text{or, as a vector}\qquad \vec p = \hbar \vec k,
-\tag{1.4}
+\boxed{\,p = \hbar k\,}\qquad\text{or, as a vector}\qquad \vec p = \hbar \vec k \qquad (1.4)
 $$
 
 the direction of the momentum coinciding with the propagation direction of the
@@ -148,15 +144,15 @@ while the electron recoils with speed $v$ at angle $\varphi$.
 
 $$
 \hbar\omega + m_0 c^2 = \hbar\omega' + \frac{m_0 c^2}{\sqrt{1-\beta^2}},
-\qquad \beta \equiv \frac{v}{c}.
-\tag{1}
+\qquad \beta \equiv \frac{v}{c}
+\qquad (1)
 $$
 
 **Momentum conservation:**
 
 $$
-\hbar\vec k = \hbar\vec k' + \frac{m_0\vec v}{\sqrt{1-\beta^2}}.
-\tag{2}
+\hbar\vec k = \hbar\vec k' + \frac{m_0\vec v}{\sqrt{1-\beta^2}}
+\qquad (2)
 $$
 
 Here $m_0$ is the electron rest mass and $m_0/\sqrt{1-\beta^2}$ its relativistic
@@ -170,13 +166,13 @@ Resolve the vector equation (2) into components **parallel** and
 
 $$
 \hbar\frac{\omega}{c} = \hbar\frac{\omega'}{c}\cos\vartheta
-      + \frac{m_0 v}{\sqrt{1-\beta^2}}\cos\varphi,
-\tag{2$\parallel$}
+      + \frac{m_0 v}{\sqrt{1-\beta^2}}\cos\varphi
+\qquad (2\parallel)
 $$
 
 $$
-\hbar\frac{\omega'}{c}\sin\vartheta = \frac{m_0 v}{\sqrt{1-\beta^2}}\sin\varphi.
-\tag{2$\perp$}
+\hbar\frac{\omega'}{c}\sin\vartheta = \frac{m_0 v}{\sqrt{1-\beta^2}}\sin\varphi
+\qquad (2\perp)
 $$
 
 **Step 1 — eliminate the electron angle $\varphi$.** Move the photon terms to
@@ -185,8 +181,8 @@ $\cos^2\varphi+\sin^2\varphi=1$ the recoil angle drops out:
 
 $$
 \frac{m_0^2 v^2}{1-\beta^2}
- = \frac{\hbar^2}{c^2}\Big(\omega^2 + \omega'^2 - 2\omega\omega'\cos\vartheta\Big).
-\tag{$\ast$}
+ = \frac{\hbar^2}{c^2}\Big(\omega^2 + \omega'^2 - 2\omega\omega'\cos\vartheta\Big)
+\qquad (\ast)
 $$
 
 **Step 2 — eliminate the electron speed $v$ using energy conservation.** Square
@@ -194,8 +190,8 @@ Eq. (1) written as $\dfrac{m_0c^2}{\sqrt{1-\beta^2}} = \hbar(\omega-\omega') + m
 
 $$
 \frac{m_0^2 c^4}{1-\beta^2}
- = \hbar^2(\omega-\omega')^2 + 2\hbar(\omega-\omega')\,m_0 c^2 + m_0^2 c^4 .
-\tag{$\ast\ast$}
+ = \hbar^2(\omega-\omega')^2 + 2\hbar(\omega-\omega')\,m_0 c^2 + m_0^2 c^4
+\qquad (\ast\ast)
 $$
 
 Now use the relativistic identity (valid for any speed)
@@ -217,8 +213,7 @@ Dividing by $2\hbar m_0 c^2$ and using $1-\cos\vartheta = 2\sin^2(\vartheta/2)$:
 
 $$
 \boxed{\;\omega - \omega' = \frac{2\hbar}{m_0 c^2}\,\omega\omega'\,
-\sin^2\frac{\vartheta}{2}\;}
-\tag{1.5}
+\sin^2\frac{\vartheta}{2}\;} \qquad (1.5)
 $$
 
 ### The Compton scattering formula
@@ -230,8 +225,7 @@ $2\pi c/(\lambda\lambda')$ cancels, leaving the **Compton scattering formula**:
 
 $$
 \boxed{\;\lambda' - \lambda = 4\pi\,\frac{\hbar}{m_0 c}\,\sin^2\frac{\vartheta}{2}
- = \frac{2h}{m_0 c}\sin^2\frac{\vartheta}{2}\;}
-\tag{1.6}
+ = \frac{2h}{m_0 c}\sin^2\frac{\vartheta}{2}\;} \qquad (1.6)
 $$
 
 The wavelength shift depends **only on the scattering angle** $\vartheta$, not
@@ -261,8 +255,7 @@ $\hbar\omega = 2\pi\hbar c/\lambda$:
 
 $$
 \boxed{\;T = \hbar\omega\,
-\frac{2\lambda_c \sin^2(\vartheta/2)}{\lambda + 2\lambda_c \sin^2(\vartheta/2)}\;}
-\tag{1.7}
+\frac{2\lambda_c \sin^2(\vartheta/2)}{\lambda + 2\lambda_c \sin^2(\vartheta/2)}\;} \qquad (1.7)
 $$
 
 ### Why it matters
@@ -309,8 +302,7 @@ $$
 so the frequencies simply add:
 
 $$
-\boxed{\;\omega_{ln} = \omega_{lm} + \omega_{mn}\;}
-\tag{1.8}
+\boxed{\;\omega_{ln} = \omega_{lm} + \omega_{mn}\;} \qquad (1.8)
 $$
 
 The various spectral series arise from transitions from different higher levels
@@ -378,8 +370,7 @@ $$
 and the force is the negative gradient,
 
 $$
-\vec F = -\,\mathrm{grad}\,V = \mathrm{grad}\,(\vec m\cdot\vec H).
-\tag{1.9}
+\vec F = -\,\mathrm{grad}\,V = \mathrm{grad}\,(\vec m\cdot\vec H) \qquad (1.9)
 $$
 
 A uniform field would exert only a torque; the **gradient** is what deflects the
