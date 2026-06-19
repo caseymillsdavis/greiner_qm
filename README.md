@@ -46,7 +46,7 @@ PDF if a polished build is ever wanted.
 
 | Chapter | Title | Status |
 |---------|-------|--------|
-| _(add chapters here as they're started)_ | | |
+| [1](text/ch01-quantization-of-physical-quantities/notes.md) | The Quantization of Physical Quantities | Notes complete (pp. 1–11) |
 
 ## Working with Claude
 
