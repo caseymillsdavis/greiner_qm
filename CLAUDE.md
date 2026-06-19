@@ -42,6 +42,11 @@ When given one or more screenshots from the text:
   plain characters inside the label. **Never put `$` inside a `$$...$$` block**
   (e.g. `\tag{2$\perp$}`) — the nested delimiter desyncs the parser. For symbol
   labels use bare math like `(2\parallel)`, `(2\perp)`, `(\ast)`.
+- **Avoid the spacing macros `\,` `\;` `\:` `\!` inside math.** GitHub's markdown
+  layer mangles backslash-punctuation, so `\,` renders as a literal comma and
+  `\;` as a semicolon (e.g. `\boxed{\;x\;}` shows as `;x;`). Use a normal space,
+  or `\operatorname{...}`/`\quad`/`\qquad` (backslash-letters, which are safe).
+  Backslash-letter commands (`\frac`, `\sqrt`, `\hbar`, …) are unaffected.
 - Number or label key results so they can be cross-referenced.
 - When a screenshot maps to a note section, reference the source file, e.g.
   `<!-- source: source/sec-2.3-p045.png -->`.
