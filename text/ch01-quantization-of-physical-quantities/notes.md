@@ -395,6 +395,13 @@ electron tube is filled with **mercury vapour**; electrons are accelerated
 through it and the current is measured as a function of the accelerating
 voltage, giving a current–voltage characteristic.
 
+![Franck–Hertz current–voltage characteristic](figures/fig-1.4-franck-hertz.png)
+
+<!-- figure: cropped from source/p10.jpg -->
+*The current $J$ rises, then drops sharply each time the electrons gain just
+enough energy (a further 4.9 eV) to excite a mercury atom, producing regular
+maxima and minima at multiples of 4.9 V (4.9, 9.8, 14.7 eV).*
+
 ### What the characteristic shows
 
 - As long as the electron energy stays **below 4.9 eV**, electrons cross the
