@@ -50,6 +50,10 @@ When given one or more screenshots from the text:
 - **`\operatorname{...}` is *not* allowed** by GitHub's MathJax subset ("The
   following macros are not allowed: operatorname"). For named operators use a
   built-in (`\nabla` for grad/div/curl, `\sin`, `\log`, …) or `\mathrm{...}`.
+- **Don't put inline `$...$` math inside emphasis** (`*italic*` or `**bold**`) —
+  GitHub renders it raw (you see the literal `$...$`). Math sitting *next to*
+  emphasis on the same line is fine; only math *inside* the `*...*` span breaks.
+  So figure captions that contain math must be **plain text, not italicized**.
 - **In table cells, don't wrap inline `$...$` in literal parentheses** like
   `($\vec F = \dots$)` — GitHub fails to parse the delimiters there (it works in
   ordinary body text, but not inside a `|`-delimited cell). Separate with
@@ -76,13 +80,15 @@ Workflow:
   thin axes are easy to clip — budget a few passes.
 - **Downscale the final crop with `--scale 0.333`** (~1/3) for a sensible
   display size in the notes; write it to `figures/fig-<section>-<slug>.png`.
-- **Embed** with an image, a source comment, and an italic English caption:
+- **Embed** with an image, a source comment, and a **plain-text** English
+  caption (not italicized — captions usually contain `$math$`, which GitHub
+  renders raw inside `*...*`):
 
   ```
   ![alt text](figures/fig-1.4-franck-hertz.png)
 
   <!-- figure: cropped from source/p10.jpg -->
-  *Caption in plain English; inline $math$ is fine, but no nested `*...*`.*
+  Caption in plain English; inline $math$ is fine in plain text.
   ```
 
 - **Leave scan artifacts (show-through / bleed) as-is** — don't over-process.

@@ -51,8 +51,8 @@ resulting current is read off a meter.
 ![Photoelectric measurement apparatus](figures/fig-1.1-photoelectric-apparatus.png)
 
 <!-- figure: cropped from source/p02.jpg -->
-*Principle of the measurement: light frees electrons from a metal plate; they
-travel to a collector plate, and the resulting current is read on the meter.*
+Principle of the measurement: light frees electrons from a metal plate; they
+travel to a collector plate, and the resulting current is read on the meter.
 
 The experimental facts that classical wave theory **cannot** explain:
 
@@ -78,8 +78,8 @@ $$
 ![Energy versus frequency of the photoelectrons](figures/fig-1.1-energy-frequency.png)
 
 <!-- figure: cropped from source/p03.jpg -->
-*The kinetic energy $E$ of the photoelectrons grows linearly with the light's
-frequency $\omega$, meeting the axis at the threshold $\omega_A$.*
+The kinetic energy $E$ of the photoelectrons grows linearly with the light's
+frequency $\omega$, meeting the axis at the threshold $\omega_A$.
 
 The proportionality constant — read off as the slope of the line — is **Planck's
 quantum of action** $h$ (or $\hbar = h/2\pi$):
@@ -197,9 +197,9 @@ $\beta = v/c$).
 ![Compton scattering kinematics](figures/fig-1.2-compton-kinematics.png)
 
 <!-- figure: cropped from source/p05.jpg -->
-*Kinematics of Compton scattering: the incoming photon $\hbar\vec k$ scatters to
+Kinematics of Compton scattering: the incoming photon $\hbar\vec k$ scatters to
 $\hbar\vec k'$ through angle $\vartheta$, while the electron recoils with
-momentum $\vec p$ at angle $\varphi$.*
+momentum $\vec p$ at angle $\varphi$.
 
 **Energy conservation:**
 
@@ -325,10 +325,10 @@ $$
 ![Energy distribution of photons and electrons versus scattering angle](figures/fig-1.2-compton-energy-distribution.png)
 
 <!-- figure: cropped from source/p07.jpg -->
-*Energy carried by the scattered photon (upper vectors, $\hbar\omega$) and by
+Energy carried by the scattered photon (upper vectors, $\hbar\omega$) and by
 the recoil electron (lower vectors, $\frac{m}{2}v^2$) as the scattering angle
 runs from forward (direction 1, no deflection and no energy transfer) to
-backward (direction 10, maximum energy handed to the electron).*
+backward (direction 10, maximum energy handed to the electron).
 
 ### Why it matters
 
@@ -403,9 +403,9 @@ $$
 ![Energy-level scheme illustrating the Ritz combination principle](figures/fig-1.3-ritz-levels.png)
 
 <!-- figure: cropped from source/p08.jpg -->
-*A transition $E_l \to E_n$ (frequency $\omega_{ln}$) viewed through an
+A transition $E_l \to E_n$ (frequency $\omega_{ln}$) viewed through an
 intermediate level $E_m$: it equals $E_l \to E_m$ plus $E_m \to E_n$, so the
-frequencies add, $\omega_{ln} = \omega_{lm} + \omega_{mn}$.*
+frequencies add, $\omega_{ln} = \omega_{lm} + \omega_{mn}$.
 
 The various spectral series arise from transitions from different higher levels
 down to a common lower ("ground") level $E_n$.
@@ -432,9 +432,9 @@ voltage, giving a current–voltage characteristic.
 ![Franck–Hertz current–voltage characteristic](figures/fig-1.4-franck-hertz.png)
 
 <!-- figure: cropped from source/p10.jpg -->
-*The current $J$ rises, then drops sharply each time the electrons gain just
+The current $J$ rises, then drops sharply each time the electrons gain just
 enough energy (a further 4.9 eV) to excite a mercury atom, producing regular
-maxima and minima at multiples of 4.9 V (4.9, 9.8, 14.7 eV).*
+maxima and minima at multiples of 4.9 V (4.9, 9.8, 14.7 eV).
 
 ### What the characteristic shows
 
@@ -506,9 +506,9 @@ the distribution of atoms after passing through was measured.
 ![Intensity distribution of the silver-atom beam](figures/fig-1.5-stern-gerlach.png)
 
 <!-- figure: cropped from source/p11.jpg -->
-*Intensity of the silver-atom beam on the detector. Without the field
+Intensity of the silver-atom beam on the detector. Without the field
 (ohne Feld) it is a single peak; with the inhomogeneous field (mit Feld) the
-beam splits into two — the signature of space quantization.*
+beam splits into two — the signature of space quantization.
 
 This means the magnetic moment of the silver atom **cannot take an arbitrary
 orientation** relative to the field — only **two opposite settings** are

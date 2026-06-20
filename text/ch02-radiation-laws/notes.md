@@ -20,10 +20,10 @@ Wien's displacement law, and the cosmic microwave background.
 ![Black-body emittance: Rayleigh–Jeans, Planck, and Wien](figures/fig-2.0-blackbody-spectrum.png)
 
 <!-- figure: cropped from source/p12.jpg -->
-*The emittance of a black body versus $hc/\lambda k T$. Rayleigh–Jeans (dashed)
+The emittance of a black body versus $hc/\lambda k T$. Rayleigh–Jeans (dashed)
 follows the curve only at long wavelengths (small abscissa) and shoots off to
 infinity; Wien (dashed) works only at short wavelengths; Planck (solid)
-interpolates correctly across the whole spectrum.*
+interpolates correctly across the whole spectrum.
 
 ---
 
@@ -61,9 +61,9 @@ way with $\cos\vartheta$.
 ![Projected area of an emitting surface element](figures/fig-2.1-cavity-projection.png)
 
 <!-- figure: cropped from source/p14.jpg -->
-*Radiation leaving the surface element $dF$ at angle $\vartheta$ to the normal
+Radiation leaving the surface element $dF$ at angle $\vartheta$ to the normal
 appears to come from the smaller projected area $dF\cos\vartheta$ — the geometric
-origin of Lambert's cosine law.*
+origin of Lambert's cosine law.
 
 ---
 
@@ -141,9 +141,9 @@ is worth doing slowly.
 ![Radiation escaping through the exit aperture](figures/fig-2.1-aperture.png)
 
 <!-- figure: cropped from source/p17.jpg -->
-*The setup: isotropic radiation inside the cavity leaves through a small hole of
+The setup: isotropic radiation inside the cavity leaves through a small hole of
 area $A$ (the Austrittsfläche, "exit surface"). A wave travelling at angle
-$\vartheta_i$ to the hole's normal is what we must average over.*
+$\vartheta_i$ to the hole's normal is what we must average over.
 
 **Step 1 — one wave: flux equals energy density times $c$.** Take a single plane
 wave filling a cylinder of length $l$ and cross-section $F$ (volume $V = lF$).
@@ -161,8 +161,8 @@ is its energy density carried forward at speed $c$.
 ![Plane wave in a cylinder](figures/fig-2.1-cylinder-wave.png)
 
 <!-- figure: cropped from source/p16.jpg -->
-*A single plane wave fills a cylinder of length $l$ and end-face $F$; all its
-energy crosses the face in time $t = l/c$, giving $I_0 = c\varrho$.*
+A single plane wave fills a cylinder of length $l$ and end-face $F$; all its
+energy crosses the face in time $t = l/c$, giving $I_0 = c\varrho$.
 
 **Step 2 — isotropic field: share the waves over all directions.** Real cavity
 radiation is **isotropic**: it travels equally in every direction. Model it as
@@ -197,9 +197,9 @@ the area of a ring on the unit sphere, normalized to the whole sphere.
 ![Isotropic plane waves and the solid-angle ring](figures/fig-2.1-isotropic.png)
 
 <!-- figure: cropped from source/p17.jpg -->
-*The isotropic model: $N$ plane-wave directions $\vec k$ spread over all angles.
+The isotropic model: $N$ plane-wave directions $\vec k$ spread over all angles.
 The waves in the ring between $\vartheta_i$ and $\vartheta_i + d\vartheta_i$
-occupy the solid angle $d\Omega_i = 2\pi\sin\vartheta_i  d\vartheta_i$.* A wave arriving at angle
+occupy the solid angle $d\Omega_i = 2\pi\sin\vartheta_i  d\vartheta_i$. A wave arriving at angle
 $\vartheta_i$ to the surface normal pushes its energy through only the
 *projected* opening $F\cos\vartheta_i$, so it contributes the power
 
@@ -398,11 +398,11 @@ volume.
 ![Counting modes in k-space](figures/fig-2.3-mode-counting.png)
 
 <!-- figure: cropped from source/p21.jpg -->
-*Two-dimensional sketch of the count. Each mode is a dot at
+Two-dimensional sketch of the count. Each mode is a dot at
 $(n_x\tfrac{\pi}{a}, n_y\tfrac{\pi}{a}, \dots)$; its distance from the origin is
 the wavenumber $k$. The modes with $k$ in $[k, k+dk]$ lie in the thin shell
 between the two quarter-circle arcs — and only the first octant (all $n_i>0$)
-counts.*
+counts.
 
 Switch to spherical coordinates with $n^2 = n_x^2+n_y^2+n_z^2$. Only the **first
 octant** counts (all $n_i>0$), giving a shell volume
