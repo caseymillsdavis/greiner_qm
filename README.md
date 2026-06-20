@@ -47,6 +47,7 @@ PDF if a polished build is ever wanted.
 | Chapter | Title | Status |
 |---------|-------|--------|
 | [1](text/ch01-quantization-of-physical-quantities/notes.md) | The Quantization of Physical Quantities | Notes complete (pp. 1–11), figures included |
+| [2](text/ch02-radiation-laws/notes.md) | Radiation Laws (*Strahlungsgesetze*) | Folder ready — awaiting screenshots |
 
 ## Working with Claude
 
