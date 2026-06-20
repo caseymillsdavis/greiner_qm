@@ -71,17 +71,35 @@ from the **second law of thermodynamics**:
    and no longer changes in time.
 2. The field is **isotropic and homogeneous**: $J(\omega,T)$ depends only on the
    temperature $T$, not on direction, position, or the material/shape of the
-   walls. (If two cavities at the same $T$ had different $J$, connecting them
-   would let energy flow from one to the other with no temperature difference —
-   a perpetual-motion machine of the second kind.)
+   walls. (If two cavities at the same $T$ had different emissive powers
+   $J(\omega,T)$, connecting them would let energy flow from one to the other
+   with no temperature difference — a perpetual-motion machine of the second
+   kind.)
 
 ### Linking emissive power to energy density
 
-A single electromagnetic wave with energy density $e$ and energy-flux (Poynting)
-magnitude $|\vec S|$ satisfies $e = |\vec S|/c$. Summing the contributions of
-all waves in $d\omega$ and over all directions $d\Omega$, and counting **two
-polarizations**, the cavity's spectral energy density $\varrho(\omega,T)$ and
-its emissive power are related by
+We need a relation between two distinct quantities:
+
+- the **emissive power** $J(\omega,T)$ — energy radiated per unit area, per unit
+  time, per unit frequency, *per unit solid angle* (i.e. the radiance), and
+- the **energy density** $\varrho(\omega,T)$ — energy *stored* per unit volume,
+  per unit frequency, summed over all directions and both polarizations.
+
+The bridge between "energy flowing" and "energy stored" is the **Poynting
+vector** $\vec S$, the energy flux of an electromagnetic wave: the energy
+crossing unit area per unit time (units: power/area). For a wave travelling at
+speed $c$, all the energy contained in a column of length $c  dt$ and unit
+cross-section pours through the end face in time $dt$, so the flux is simply the
+energy density carried forward at speed $c$:
+
+$$
+|\vec S| = c  e \qquad\Longleftrightarrow\qquad e = \frac{|\vec S|}{c}
+$$
+
+(the same statement as $I_0 = c\varrho$ used in Exercise 2.1 below). Carrying
+this through the directional averaging — collecting all waves in $d\omega$,
+averaging the flux over propagation directions, and counting both polarizations
+— gives the cavity relation
 
 $$
 \varrho(\omega,T)  d\omega = \frac{8\pi}{c}  J(\omega,T)  d\omega
@@ -89,54 +107,107 @@ $$
 \boxed{J(\omega,T) = \frac{c}{8\pi} \varrho(\omega,T)} \qquad (2.1)
 $$
 
-This is the key bridge: once we compute $\varrho$, the emissive power follows.
+**Where the $8\pi$ comes from.** It is $8\pi = 2 \times 4\pi$: the $4\pi$ is the
+total solid angle (steradians) over which the isotropic radiation is spread, and
+the $2$ counts the **two independent polarizations** of light. (In Greiner's
+bookkeeping $J$ is the radiance *per polarization*, so the light current sent
+into a cone is $2J\cos\vartheta  d\omega  dF  d\Omega$, the $2$ being the
+polarization factor; integrating $J$ over the full $4\pi$ then produces the
+$8\pi$.) Exercise 2.1 reproduces the same coefficient by working the geometry out
+directly.
 
 ### Exercise 2.1 — energy density vs. intensity (the $c/8\pi$ factor)
 
 <!-- source: source/p16.jpg, source/p17.jpg, source/p18.jpg -->
 
-*Where does the $c/8\pi$ come from?* For a single plane wave filling a cylinder
-of length $l$ and cross-section $F$ (volume $V=lF$), the energy crosses the end
-face in time $t=l/c$, so the intensity (power per area) is
+Let us see explicitly where the $c/8\pi$ in Eq. (2.1) comes from. The geometry
+is worth doing slowly.
+
+**Step 1 — one wave: flux equals energy density times $c$.** Take a single plane
+wave filling a cylinder of length $l$ and cross-section $F$ (volume $V = lF$).
+All the energy it holds, $E = \varrho V = \varrho l F$, streams out through the
+end face in the time $t = l/c$ it takes light to cross the cylinder. The
+intensity (power per unit area) is therefore
 
 $$
 I_0 = \frac{P}{F} = \frac{E}{F t} = \frac{\varrho  l F}{F (l/c)} = c \varrho
 $$
 
-Now fill the cavity with **isotropic** radiation, modelled as $N$ plane waves
-whose $\vec k$-vectors point uniformly in all directions. The fraction of waves
-pointing into the cone $d\Omega_i$ at polar angle $\vartheta_i$ is
+This is the $|\vec S| = c  e$ relation again, now in words: a beam's intensity
+is its energy density carried forward at speed $c$.
+
+**Step 2 — isotropic field: share the waves over all directions.** Real cavity
+radiation is **isotropic**: it travels equally in every direction. Model it as
+$N$ identical plane waves whose propagation directions $\vec k$ are spread
+uniformly over the full sphere. "Uniformly over the sphere" is the crucial idea,
+so let us be careful about solid angles.
+
+The element of solid angle in spherical coordinates is
 
 $$
-\frac{n_i}{N} = \frac{d\Omega_i}{\Omega} = \tfrac{1}{2}\sin\vartheta_i  d\vartheta_i
+d\Omega = \sin\vartheta  d\vartheta  d\varphi, \qquad
+\int d\Omega = \int_0^\pi\int_0^{2\pi}\sin\vartheta  d\varphi  d\vartheta = 4\pi
 $$
 
-(having integrated over the azimuth $\varphi$). Each wave delivers, through the
-aperture $F$, the power $P_{0i} = I_0 F\cos\vartheta_i$. Summing and replacing
-the sum by an integral over the forward hemisphere ($0 \le \vartheta \le \pi/2$):
+The waves heading into a thin cone at polar angle $\vartheta$ (any azimuth
+$\varphi$) form a ring. Doing the azimuthal integral $\int_0^{2\pi} d\varphi =
+2\pi$ collapses that ring to the solid angle $2\pi\sin\vartheta  d\vartheta$, and
+the **fraction** of the $N$ waves lying in it is its share of the full $4\pi$:
+
+$$
+\frac{n_i}{N} = \frac{d\Omega_i}{\Omega}
+ = \frac{2\pi\sin\vartheta_i  d\vartheta_i}{4\pi}
+ = \tfrac{1}{2}\sin\vartheta_i  d\vartheta_i
+$$
+
+The $\sin\vartheta$ is purely geometric: there is very little solid angle near
+the poles ($\vartheta\approx 0$) and a lot near the equator
+($\vartheta\approx\pi/2$), so most directions point "sideways," not straight
+along the axis. This is the factor the text writes down in one line — it is just
+the area of a ring on the unit sphere, normalized to the whole sphere.
+
+**Step 3 — power through the aperture (Lambert again).** A wave arriving at angle
+$\vartheta_i$ to the surface normal pushes its energy through only the
+*projected* opening $F\cos\vartheta_i$, so it contributes the power
+
+$$
+P_{0i} = I_0  F\cos\vartheta_i
+$$
+
+Each of the $n_i$ waves in the ring contributes this. Summing over rings and
+turning the sum into an integral over the **forward hemisphere**
+($0 \le \vartheta \le \pi/2$ — the half whose waves actually leave through the
+aperture):
 
 $$
 I_{\text{ges}} = \frac{P_{\text{ges}}}{F}
+ = \sum_i \frac{n_i}{N}  N I_0 \cos\vartheta_i
  = \frac{N I_0}{2}\int_0^{\pi/2}\sin\vartheta\cos\vartheta  d\vartheta
  = \frac{1}{4} N I_0
 $$
 
-With the total energy density $\varrho = N\varrho_0$ and $I_0 = c\varrho_0$ this
-gives $I_{\text{ges}} = \tfrac{c}{4}\varrho$. This power is radiated into a
-**hemisphere** ($\Omega_H = 2\pi$), so the intensity *per unit solid angle* is
+using $\int_0^{\pi/2}\sin\vartheta\cos\vartheta  d\vartheta = \tfrac{1}{2}$. The
+two angular factors — the $\tfrac{1}{2}\sin\vartheta$ from counting directions and
+the $\cos\vartheta$ from the Lambert projection — together produce the famous
+**factor of $\tfrac{1}{4}$** that links energy density to emitted flux.
+
+**Step 4 — assemble.** With $\varrho = N\varrho_0$ and $I_0 = c\varrho_0$ this is
 
 $$
-I = \frac{1}{2\pi} I_{\text{ges}} = \frac{c}{8\pi} \varrho
+\boxed{\text{emittance} = I_{\text{ges}} = \frac{c}{4} \varrho} \qquad (2.2)
 $$
 
-— exactly the factor in Eq. (2.1). The handy by-product
+— the total power radiated per unit area from a black surface (used for the
+Stefan–Boltzmann law in §2.6). Finally, since this power leaves into a
+**hemisphere** of solid angle $\Omega_H = 2\pi$, the intensity *per unit solid
+angle* is
 
 $$
-\boxed{ \text{emittance } = \frac{c}{4} \varrho } \qquad (2.2)
+I = \frac{1}{2\pi}  I_{\text{ges}} = \frac{1}{2\pi}\cdot\frac{c}{4} \varrho
+ = \frac{c}{8\pi} \varrho
 $$
 
-(total power radiated per unit area from a black surface) is used later for the
-Stefan–Boltzmann law.
+— exactly the coefficient in Eq. (2.1), reached here purely from the geometry.
 
 ---
 
