@@ -487,7 +487,7 @@ The effect is called **space quantization** or **directional quantization**
 | Compton effect | momentum of light | $\vec p = \hbar\vec k$; $\lambda'-\lambda = \dfrac{2h}{m_0c}\sin^2\frac{\vartheta}{2}$ |
 | Ritz combination principle | atomic energy levels | $\omega_{ln} = \omega_{lm} + \omega_{mn}$ |
 | Franck–Hertz | atomic energy levels (Hg) | excitation in fixed lump $\approx 4.9$ eV |
-| Stern–Gerlach | orientation / angular momentum | beam splits in two ($\vec F = \nabla(\vec m\cdot\vec H)$) |
+| Stern–Gerlach | orientation / angular momentum | beam splits in two; force $\vec F = \nabla(\vec m\cdot\vec H)$ |
 
 The recurring lesson: quantities that classical physics assumes are continuous
 — energy, momentum, orientation — are found experimentally to be **discrete**.

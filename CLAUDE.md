@@ -50,6 +50,10 @@ When given one or more screenshots from the text:
 - **`\operatorname{...}` is *not* allowed** by GitHub's MathJax subset ("The
   following macros are not allowed: operatorname"). For named operators use a
   built-in (`\nabla` for grad/div/curl, `\sin`, `\log`, …) or `\mathrm{...}`.
+- **In table cells, don't wrap inline `$...$` in literal parentheses** like
+  `($\vec F = \dots$)` — GitHub fails to parse the delimiters there (it works in
+  ordinary body text, but not inside a `|`-delimited cell). Separate with
+  punctuation instead, e.g. `...; force $\vec F = \dots$`.
 - Number or label key results so they can be cross-referenced.
 - When a screenshot maps to a note section, reference the source file, e.g.
   `<!-- source: source/sec-2.3-p045.png -->`.
