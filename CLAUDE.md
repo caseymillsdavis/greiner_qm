@@ -60,6 +60,33 @@ When given one or more screenshots from the text:
 - Favor full derivations over hand-waving; show intermediate steps.
 - Add an "Intuition" or "Why this matters" aside where it aids understanding.
 
+### Figures (cropping from the screenshots)
+Diagrams from the text are cropped out of the chapter's `source/` screenshots
+and saved into `figures/`. Use the helper `tools/figcrop.py` (needs Pillow:
+`pip install Pillow`):
+
+```
+python3 tools/figcrop.py SRC DST LEFT TOP RIGHT BOTTOM [--scale S]
+```
+
+Workflow:
+- **Find the crop box by trial.** Write a guess to `/tmp/preview.png` at full
+  scale, view it, and adjust the `LEFT TOP RIGHT BOTTOM` pixel bounds. The
+  figure is often lower / further right than a glance at the page suggests, and
+  thin axes are easy to clip — budget a few passes.
+- **Downscale the final crop with `--scale 0.333`** (~1/3) for a sensible
+  display size in the notes; write it to `figures/fig-<section>-<slug>.png`.
+- **Embed** with an image, a source comment, and an italic English caption:
+
+  ```
+  ![alt text](figures/fig-1.4-franck-hertz.png)
+
+  <!-- figure: cropped from source/p10.jpg -->
+  *Caption in plain English; inline $math$ is fine, but no nested `*...*`.*
+  ```
+
+- **Leave scan artifacts (show-through / bleed) as-is** — don't over-process.
+
 ### Structure of each chapter's notes.md
 Start from the template:
 - Title + chapter heading
