@@ -328,6 +328,38 @@ The $n_i$ are positive (standing waves only). Each allowed mode is one lattice
 point in $n$-space, so the number of modes in $(dn_x  dn_y  dn_z)$ is just that
 volume.
 
+> **Why are standing waves enough?** This is the right thing to worry about —
+> three points make the restriction legitimate.
+>
+> 1. **The walls force them.** A single travelling wave
+>    $e^{i(\omega t - \vec k\cdot\vec r)}$ cannot, on its own, satisfy the wall
+>    condition that the tangential electric field vanish on every face at all
+>    times — a wave that keeps moving does not stay zero on a fixed plane. What
+>    *can* satisfy it is a superposition of oppositely-directed travelling waves,
+>    and that superposition is precisely a **standing wave**. Reflection at the
+>    walls is what converts running waves into standing ones — just as a string
+>    fixed at both ends supports only standing waves, while an infinite string
+>    supports running ones. So the standing-wave restriction is not an extra
+>    assumption; it is *imposed* by the reflecting boundary you chose.
+>
+> 2. **They throw nothing away — completeness.** The standing-wave modes form a
+>    **complete basis**: *any* field in the cavity — travelling waves, arbitrary
+>    radiation, whatever — can be expanded as a superposition of them (a Fourier
+>    series). Restricting to standing waves is therefore not discarding physics;
+>    it is choosing a convenient set of "coordinates" for the field. Counting the
+>    modes counts the field's independent **degrees of freedom**, and that number
+>    does not depend on which basis you count in. Each mode then behaves as one
+>    independent harmonic oscillator — exactly what the thermodynamics needs.
+>
+> 3. **The cavity doesn't matter anyway.** Section 2.2 showed (from the second
+>    law) that $\varrho(\omega,T)$ is independent of the cavity's shape, size, and
+>    wall material. We are free to pick the most convenient idealization — a cube
+>    with reflecting walls — to do the count. Repeating it with *periodic*
+>    boundary conditions instead (running waves, $\vec k$-spacing $2\pi/a$,
+>    counting the full sphere of $\vec k$) gives the **same** mode density: the
+>    factor of $2$ from the coarser spacing and the factor of $2$ from using all
+>    octants of $\vec k$-space cancel.
+
 ### Counting in $k$-space
 
 Switch to spherical coordinates with $n^2 = n_x^2+n_y^2+n_z^2$. Only the **first
