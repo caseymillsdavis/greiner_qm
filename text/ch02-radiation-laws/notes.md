@@ -459,6 +459,12 @@ Rather than counting modes classically, Einstein's later derivation tracks the
 $E_m > E_n$, with $\omega = (E_m - E_n)/\hbar$. Three processes occur, each for a
 photon of polarization $\alpha$ into solid angle $d\Omega$:
 
+![Emission of a photon in a downward transition](figures/fig-2.4-transition.png)
+
+<!-- figure: cropped from source/p24.jpg -->
+A transition from the upper level $E_m$ to the lower level $E_n$ emits a photon
+of energy $\hbar\omega = E_m - E_n$.
+
 | Process | Probability |
 |---|---|
 | Spontaneous emission | $dW_e' = a^n_{m\alpha}  d\Omega$ |
@@ -599,6 +605,16 @@ derivation. The limits reproduce $\bar\varepsilon = k_B T$ for small $\omega/T$
 (classical) and $\bar\varepsilon = \hbar\omega  e^{-\hbar\omega/k_B T}$ for large
 $\omega/T$ (Wien).
 
+![Mean energy and specific heat of an oscillator](figures/fig-2.5-oscillator-energy.png)
+
+<!-- figure: cropped from source/p29.jpg -->
+Left: the mean energy $\bar\varepsilon/\hbar\omega$ versus $k_B T/\hbar\omega$ —
+linear (classical, $\bar\varepsilon = k_B T$) at high temperature, but frozen
+toward zero once $k_B T \ll \hbar\omega$. Right: the specific heat
+$d\bar\varepsilon/k dT$, which rises to the classical value $1$ and falls off
+when the quantum $\hbar\omega$ becomes too costly — the same freezing that cures
+the ultraviolet catastrophe.
+
 > **Reading $\bar\varepsilon$.** The factor $1/(e^{\hbar\omega/k_BT}-1)$ is the
 > **mean number of photons** $\bar n$ in a mode of energy $\hbar\omega$; the mode
 > energy is then $\bar\varepsilon = \bar n \hbar\omega$. Quantizing the
@@ -663,6 +679,15 @@ $$
 (The factor $c/4$ comes from integrating $K\cos\vartheta$ over the forward
 hemisphere: $\varepsilon = \pi K = \tfrac{c}{4}\tfrac{E}{V}$.)
 
+![Emission from a surface element into the upper hemisphere](figures/fig-2.6-hemisphere.png)
+
+<!-- figure: cropped from source/p32.jpg -->
+The surface element $df$ radiates into the solid angle
+$d\Omega = \sin\vartheta  d\vartheta  d\varphi$ at angle $\vartheta$ to the
+normal $z$. Integrating the radiance $K$, weighted by the Lambert factor
+$\cos\vartheta$, over the forward hemisphere yields $\varepsilon = \pi K$, hence
+the factor $c/4$.
+
 ### Application: the temperature of the Sun
 
 Stars radiate approximately as black bodies. With the Sun's radius
@@ -698,6 +723,13 @@ $$
 Besides the trivial $x=0$ (a minimum), this has one positive root
 $x_{\max}\approx 2.82$ (solved graphically/numerically). Hence
 $\hbar\omega_{\max}/k_B T = x_{\max}$, i.e. $\omega_{\max} \propto T$.
+
+![Graphical solution of the transcendental equation](figures/fig-2.7-wien-graphical.png)
+
+<!-- figure: cropped from source/p34.jpg -->
+Graphical solution: the curves $e^x$ and $(1-x/3)^{-1}$ cross at $x_{\max}\approx
+2.82$. The second curve has a vertical asymptote at $x = 3$, so the crossing must
+lie just below it.
 
 > **A subtlety worth flagging.** The peak location depends on *which variable*
 > you bin by. The maximum of the density per unit **frequency** $\varrho(\omega)$
@@ -752,6 +784,14 @@ light**.
 *(Kosmische Schwarzkörperstrahlung)*
 
 <!-- source: source/p35.jpg, source/p36.jpg -->
+
+![Measured cosmic background radiation versus wavelength](figures/fig-2.9-cmb-spectrum.png)
+
+<!-- figure: cropped from source/p35.jpg -->
+A rough representation of the measured background radiation, in
+erg/(s cm sr Hz), as a function of wavelength in cm (note the reversed,
+logarithmic axis). The data points (with error bars) track the solid curve — the
+predicted black-body spectrum for $T = 2.7$ K.
 
 Black-body radiation regained prominence with cosmology. The **Big Bang**
 ("Urknall") model (Gamow; Alpher, Bethe, Gamow) predicts that the intense
