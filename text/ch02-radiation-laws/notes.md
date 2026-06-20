@@ -223,14 +223,68 @@ classical thermal energy $k_B T$.
 
 ### Setting up the modes
 
-Take a cube of side $a$ with perfectly reflecting walls. The vector potential
-$\vec A$ obeys the wave equation $\Box \vec A = 0$; separating time as
-$\vec A(\vec r,t)=\vec A(\vec r)e^{i\omega t}$ gives the Helmholtz equation
+Take a cube of side $a$ with perfectly reflecting walls, and ask which
+electromagnetic fields can persist inside it.
+
+**The wave equation.** In the empty cavity (no charges or currents) Maxwell's
+equations imply that the field propagates as a wave at speed $c$. Working with
+the vector potential $\vec A$ (in the Coulomb gauge) for convenience, each of its
+components obeys
+
+$$
+\nabla^2 \vec A - \frac{1}{c^2}\frac{\partial^2 \vec A}{\partial t^2} = 0
+$$
+
+The operator on the left — the Laplacian minus $1/c^2$ times the second time
+derivative — is the **d'Alembertian** (wave operator), often abbreviated
+$\Box\vec A = 0$. In words: the way the field curves in space, $\nabla^2\vec A$,
+is locked to how it accelerates in time, $\partial^2\vec A/\partial t^2$, and the
+proportionality constant $1/c^2$ is exactly what makes the disturbance travel at
+speed $c$. (The electric and magnetic fields obey the same equation; using
+$\vec A$ just keeps the algebra short. Here $\nabla^2 = \Delta$ is the Laplacian.)
+
+**Why we can separate off the time.** The wave equation is *linear* and its
+coefficients do not depend on time. That lets us look for solutions that oscillate
+**harmonically** at a single frequency $\omega$ — the **normal modes** (standing
+waves) of the cavity:
+
+$$
+\vec A(\vec r,t) = \vec A(\vec r)  e^{i\omega t}
+$$
+
+(equally $\vec A(\vec r)\sin\omega t$ or $\cos\omega t$; the complex exponential
+is just convenient bookkeeping). This is **separation of variables**: we assume
+the space- and time-dependence factorize into a product
+$\vec A(\vec r)\cdot(\text{function of }t)$. It costs no generality, because
+linearity guarantees that the most general field is a superposition (a Fourier
+sum) of such single-frequency pieces — so it is enough to understand one
+frequency at a time. Physically, a closed cavity "rings" at a discrete set of
+frequencies, exactly like an organ pipe or a drumhead; each ringing pattern is
+one mode.
+
+**The Helmholtz equation.** Substitute the separated form into the wave equation.
+The time derivative gives $\partial^2_t e^{i\omega t} = -\omega^2 e^{i\omega t}$,
+and the common factor $e^{i\omega t}$ cancels, leaving a purely *spatial*
+equation for $\vec A(\vec r)$:
+
+$$
+\nabla^2 \vec A(\vec r) + \frac{\omega^2}{c^2}\vec A(\vec r) = 0
+$$
+
+Introducing the wavenumber $k = \omega/c$, this is the **Helmholtz equation**
 
 $$
 \left(\Delta + \frac{\omega^2}{c^2}\right)\vec A(\vec r)
  = (\Delta + k^2)\vec A(\vec r) = 0, \qquad k=\frac{\omega}{c}
 $$
+
+The Helmholtz equation is simply the time-independent ("stationary") form of the
+wave equation: an **eigenvalue problem** for the Laplacian, asking which spatial
+patterns reproduce themselves — up to the constant factor $-k^2$ — under
+$\nabla^2$. Which values of $k$ (and hence which frequencies $\omega = ck$) are
+allowed is then decided entirely by the **boundary conditions** at the walls.
+That is the standing-wave condition we impose next; it is the three-dimensional
+version of the rule that fixes the allowed pitches of a vibrating string.
 
 Two physical constraints fix the modes:
 
