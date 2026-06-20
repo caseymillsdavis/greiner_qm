@@ -45,8 +45,11 @@ When given one or more screenshots from the text:
 - **Avoid the spacing macros `\,` `\;` `\:` `\!` inside math.** GitHub's markdown
   layer mangles backslash-punctuation, so `\,` renders as a literal comma and
   `\;` as a semicolon (e.g. `\boxed{\;x\;}` shows as `;x;`). Use a normal space,
-  or `\operatorname{...}`/`\quad`/`\qquad` (backslash-letters, which are safe).
-  Backslash-letter commands (`\frac`, `\sqrt`, `\hbar`, …) are unaffected.
+  or `\quad`/`\qquad` (backslash-letters, which are safe). Most backslash-letter
+  commands (`\frac`, `\sqrt`, `\hbar`, `\nabla`, …) are unaffected.
+- **`\operatorname{...}` is *not* allowed** by GitHub's MathJax subset ("The
+  following macros are not allowed: operatorname"). For named operators use a
+  built-in (`\nabla` for grad/div/curl, `\sin`, `\log`, …) or `\mathrm{...}`.
 - Number or label key results so they can be cross-referenced.
 - When a screenshot maps to a note section, reference the source file, e.g.
   `<!-- source: source/sec-2.3-p045.png -->`.
