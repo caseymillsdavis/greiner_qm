@@ -1,0 +1,5 @@
+1. "If two cavities at the same T had different J" - the bottom part of the J is being cut off here, making it look like an I.
+2. We should clarify how J relates to the Poynting vector S. The mention of S otherwise feels unmotivated.
+3. Let's be explicit about where the 8*pi is coming from in the expression for energy density (I know its just the 2 polarizations multiplied through 4*pi steradians, but its just this kind of thing that I'd like spelled out in the notes.)
+4. Exercise 2.1 has a rending problem. Literally seeing "Where does the $c/8\pi$ come from?".
+5. Exercise 2.1 is an opportunity for a broader point. Are notes here are actually more condensed than the text and what I'm after is an elaboration and clarification of the text. For example, the resulting expression of n_i/N (involved the sin) could use more explanation.
