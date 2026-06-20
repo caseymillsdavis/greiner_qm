@@ -243,6 +243,32 @@ proportionality constant $1/c^2$ is exactly what makes the disturbance travel at
 speed $c$. (The electric and magnetic fields obey the same equation; using
 $\vec A$ just keeps the algebra short. Here $\nabla^2 = \Delta$ is the Laplacian.)
 
+**The potential and the Coulomb gauge.** A word on "$\vec A$ in the Coulomb
+gauge," since we lean on it twice. The measurable fields are $\vec E$ and
+$\vec B$; they can always be written through a scalar potential $\phi$ and a
+vector potential $\vec A$ as $\vec B = \nabla\times\vec A$ and
+$\vec E = -\nabla\phi - \partial\vec A/\partial t$. But the potentials are **not
+unique**: the replacement $\vec A \to \vec A + \nabla\chi$,
+$\phi \to \phi - \partial\chi/\partial t$ — for *any* function $\chi(\vec r,t)$ —
+leaves $\vec E$ and $\vec B$, and hence all physics, completely unchanged. This
+built-in redundancy is **gauge freedom**, and to *choose a gauge* is to impose
+one extra condition on $\vec A$ that pins the freedom down. The **Coulomb gauge**
+is the choice
+
+$$
+\nabla\cdot\vec A = 0
+$$
+
+(also called the *transverse* or *radiation* gauge). In a source-free region it
+buys us exactly the two things we use: the scalar potential can be taken as
+$\phi = 0$, so $\vec A$ alone carries the field and obeys the clean wave equation
+above; and $\nabla\cdot\vec A = 0$ forces the waves to be **transverse** — for a
+plane wave $\vec A \propto e^{-i\vec k\cdot\vec r}$ the condition becomes
+$\vec A\cdot\vec k = 0$, i.e. $\vec A$ is perpendicular to the propagation
+direction $\vec k$. That transversality is what leaves **two** independent
+polarizations for each $\vec k$ (two directions perpendicular to it) — the factor
+of $2$ we keep meeting.
+
 **Why we can separate off the time.** The wave equation is *linear* and its
 coefficients do not depend on time. That lets us look for solutions that oscillate
 **harmonically** at a single frequency $\omega$ — the **normal modes** (standing
