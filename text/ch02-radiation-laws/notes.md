@@ -529,9 +529,40 @@ $$
 \frac{N_n}{N_m} = \frac{e^{-E_n/k_B T}}{e^{-E_m/k_B T}} = e^{\hbar\omega/k_B T}
 $$
 
-Solving for $\varrho_\alpha$ and demanding that $\varrho_\alpha\to\infty$ as
-$T\to\infty$ (where the exponential $\to 1$) forces the **detailed-balance
-relation** $b^n_{m\alpha} = b^m_{n\alpha}$. The result is
+**Solve for the energy density.** Gather the $\varrho_\alpha$ terms,
+$N_m a^n_{m\alpha} = (N_n b^m_{n\alpha} - N_m b^n_{m\alpha})\varrho_\alpha$, then
+divide by $N_m$ and use the Boltzmann ratio $N_n/N_m = e^{\hbar\omega/k_B T}$:
+
+$$
+\varrho_\alpha = \frac{a^n_{m\alpha}}{\dfrac{N_n}{N_m} b^m_{n\alpha} - b^n_{m\alpha}}
+ = \frac{a^n_{m\alpha}}{b^m_{n\alpha} e^{\hbar\omega/k_B T} - b^n_{m\alpha}}
+$$
+
+**The high-temperature limit makes the two induced coefficients equal.** Heat
+the cavity without bound and its radiation density grows without bound too,
+$\varrho_\alpha \to \infty$. On the right the numerator $a^n_{m\alpha}$ is a fixed
+atomic constant, so the fraction can only blow up if its **denominator vanishes**.
+As $T\to\infty$ the exponential $e^{\hbar\omega/k_B T}\to e^0 = 1$, so the
+denominator tends to $b^m_{n\alpha} - b^n_{m\alpha}$, which must therefore be
+zero:
+
+$$
+\boxed{b^n_{m\alpha} = b^m_{n\alpha}} \qquad (\text{Greiner Eq. } 14)
+$$
+
+the induced-emission and absorption coefficients are equal.
+
+> **The same conclusion, read physically.** When $T\to\infty$ the field is so
+> intense (huge $\varrho_\alpha$) that **spontaneous emission becomes
+> negligible**: the term $N_m a^n_{m\alpha}$ carries no factor of $\varrho_\alpha$,
+> whereas the two induced terms $N_m b^n_{m\alpha}\varrho_\alpha$ and
+> $N_n b^m_{n\alpha}\varrho_\alpha$ both grow with the field. Dropping the
+> spontaneous term, the balance collapses to $N_m b^n_{m\alpha} = N_n b^m_{n\alpha}$;
+> and since $N_n/N_m = e^{\hbar\omega/k_B T}\to 1$ as $T\to\infty$ (the two levels
+> become equally populated), this again gives $b^n_{m\alpha} = b^m_{n\alpha}$.
+
+Putting $b^n_{m\alpha} = b^m_{n\alpha}$ back into the solved expression, the
+denominator becomes $b^n_{m\alpha}\big(e^{\hbar\omega/k_B T} - 1\big)$, so
 
 $$
 \varrho_\alpha(\omega,T,\Omega)
