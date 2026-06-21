@@ -635,17 +635,87 @@ Planck's single formula thus contains both classical laws as limiting cases.
 
 <!-- source: source/p26.jpg, source/p27.jpg -->
 
-Comparing the photon **number densities** of the Wien and Rayleigh–Jeans regimes
-at two frequencies $\omega_2 \gg \omega_1$ gives
+Planck's formula does more than fit the data — it tells us *when* light behaves
+like a wave and when like a hail of particles. The cleanest way to see this is to
+count photons.
+
+**Set up the two number densities.** The energy density in a frequency band
+$d\omega$ is $\varrho(\omega,T) d\omega$; dividing by the energy per photon
+$\hbar\omega$ turns it into a **photon-number** density,
+$dN = \dfrac{\varrho}{\hbar\omega} d\omega$. Evaluate this in each classical
+regime. In the Rayleigh–Jeans regime, at a low frequency $\omega_1$ (using
+Eq. 2.4):
+
+$$
+dN_{RJ} = \frac{\varrho_{RJ}(\omega_1,T)}{\hbar\omega_1} d\omega
+ = \frac{k_B T}{\pi^2 \hbar c^3} \omega_1 d\omega
+$$
+
+and in the Wien regime, at a high frequency $\omega_2$ (using Eq. 2.7):
+
+$$
+dN_W = \frac{\varrho_W(\omega_2,T)}{\hbar\omega_2} d\omega
+ = \frac{\omega_2^2}{\pi^2 c^3} e^{-\hbar\omega_2/k_B T} d\omega
+$$
+
+**Take the ratio.** With $\omega_2 \gg \omega_1$,
 
 $$
 \frac{dN_W}{dN_{RJ}} = \frac{e^{-\hbar\omega_2/k_B T} \hbar\omega_2^2}{k_B T \omega_1}
 \ll 1
 $$
 
-So the **wave** character of light dominates where there are **many low-energy
-photons** (Rayleigh–Jeans regime), while the **particle** character shows up for
-**few high-energy photons** (Wien regime).
+Because $\hbar\omega_2/k_B T \gg 1$ in the Wien regime, the exponential crushes the
+ratio: **there are vastly fewer high-frequency photons than low-frequency ones.**
+Low-frequency radiation is photon-rich; high-frequency radiation is photon-poor.
+
+**Why "many photons" means wave and "few" means particle.** This is the step the
+text states but does not unpack — and it is the whole point. The bridge is the
+**mean number of photons in a single mode**,
+
+$$
+\bar n = \frac{1}{e^{\hbar\omega/k_B T} - 1}
+$$
+
+(the same occupation factor behind $\bar\varepsilon = \bar n \hbar\omega$ in
+§2.5). The two regimes are simply the two extremes of $\bar n$:
+
+- **Rayleigh–Jeans regime** ($\hbar\omega \ll k_B T$): $\bar n \approx
+  k_B T/\hbar\omega \gg 1$ — every mode is packed with many quanta.
+- **Wien regime** ($\hbar\omega \gg k_B T$): $\bar n \approx e^{-\hbar\omega/k_B T}
+  \ll 1$ — most modes are empty, and the occupied ones hold a lone photon.
+
+Now the physics that turns occupation number into observed character:
+
+- **Many quanta per mode → a wave.** When a mode holds a great many photons, you
+  can describe it by a smooth classical field amplitude, and the quantum
+  graininess is invisible: one photon carries energy $\hbar\omega$, but the mode
+  already holds $\bar n\hbar\omega$, so adding or removing a single quantum shifts
+  the field by only a fraction $1/\bar n$ — negligible. The energy arrives as a
+  dense pile of overlapping *soft* quanta that blend into a continuous flow, i.e.
+  a classical electromagnetic wave. (This is the correspondence-principle limit:
+  many quanta per mode reproduce classical electrodynamics.)
+- **Few quanta per mode → particles.** When modes are nearly empty, light arrives
+  as occasional, well-separated lumps, each dumping its whole energy $\hbar\omega$
+  in one localized event. There are simply not enough quanta to build a smooth
+  wave; you register discrete "clicks," and the corpuscular nature is
+  unavoidable. The fact that each lump is also *energetic* (high $\hbar\omega$)
+  makes the individual hits easy to see.
+
+So the chain is: high frequency $\Rightarrow$ large $\hbar\omega/k_B T$
+$\Rightarrow$ tiny occupation $\bar n \ll 1$ $\Rightarrow$ sparse, energetic,
+individually-detectable lumps $\Rightarrow$ **particle** behaviour; and low
+frequency $\Rightarrow$ huge occupation $\bar n \gg 1$ $\Rightarrow$ a smooth
+overlapping field $\Rightarrow$ **wave** behaviour. The number-density ratio above
+is one symptom of this; the occupation number $\bar n$ is the underlying cause.
+
+**Tie-in with Chapter 1.** This is exactly why light's particle nature first
+surfaced in the photoelectric and Compton effects, both performed with
+high-frequency light (UV, X-rays, $\gamma$-rays) — the photon-poor Wien end, where
+each quantum acts alone. Its wave nature (interference, diffraction) is easiest
+with visible or longer wavelengths — the photon-rich Rayleigh–Jeans end. The
+wave–particle duality of Chapter 1 is thereby made quantitative: which face of
+light you see depends on how many photons per mode the source delivers.
 
 ---
 
