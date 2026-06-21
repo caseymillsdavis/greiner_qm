@@ -523,11 +523,33 @@ N_m\big(a^n_{m\alpha} + b^n_{m\alpha}\varrho_\alpha\big)
  = N_n  b^m_{n\alpha} \varrho_\alpha
 $$
 
-The level populations follow the **Boltzmann distribution**,
+The atoms themselves are in thermal equilibrium with the cavity at temperature
+$T$, and statistical mechanics dictates how they spread over their energy levels:
+the number occupying a level of energy $E_i$ is proportional to the **Boltzmann
+factor** $e^{-E_i/k_B T}$. This is the canonical-ensemble result for any system
+held in contact with a heat bath — a state of energy $E_i$ is occupied with
+weight $e^{-E_i/k_B T}$, so a level is found populated exponentially less often
+the more its energy exceeds the thermal scale $k_B T$. (That weight is itself the
+*most probable* way to share a fixed total energy among many atoms — the
+distribution that maximizes the number of microstates, i.e. the entropy.) We
+take the levels non-degenerate here; a degeneracy would multiply each population
+by the same kind of constant weight and cancel below.
+
+Taking the ratio for our two levels, the common proportionality constant drops
+out:
 
 $$
-\frac{N_n}{N_m} = \frac{e^{-E_n/k_B T}}{e^{-E_m/k_B T}} = e^{\hbar\omega/k_B T}
+\frac{N_n}{N_m} = \frac{e^{-E_n/k_B T}}{e^{-E_m/k_B T}} = e^{(E_m-E_n)/k_B T} = e^{\hbar\omega/k_B T}
 $$
+
+Because $E_m > E_n$ the exponent is positive, so $N_n > N_m$: the lower level is
+always the more populated — as expected, at thermal equilibrium fewer atoms sit
+in higher-energy states. The size of the ratio is a tug-of-war between the level
+gap $\hbar\omega$ and the thermal energy $k_B T$. At low temperature
+($k_B T \ll \hbar\omega$) almost every atom is in the lower level
+($N_n/N_m \to \infty$); at high temperature ($k_B T \gg \hbar\omega$) the two
+levels become nearly equally populated ($N_n/N_m \to 1$) — the very limit used
+above to fix the coefficients.
 
 **Solve for the energy density.** Gather the $\varrho_\alpha$ terms,
 $N_m a^n_{m\alpha} = (N_n b^m_{n\alpha} - N_m b^n_{m\alpha})\varrho_\alpha$, then
