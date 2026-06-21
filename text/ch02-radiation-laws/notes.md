@@ -669,6 +669,31 @@ Because $\hbar\omega_2/k_B T \gg 1$ in the Wien regime, the exponential crushes 
 ratio: **there are vastly fewer high-frequency photons than low-frequency ones.**
 Low-frequency radiation is photon-rich; high-frequency radiation is photon-poor.
 
+> **What makes high frequencies photon-poor (and what does not).** A tempting
+> guess is that high-frequency photons are simply *more energetic*, so for a given
+> energy density it takes fewer of them ($N = E/\hbar\omega$). That effect is
+> real, but it is *not* the cause here — and it is worth seeing why. Write the
+> photon-number spectrum straight from Planck:
+>
+> $$
+> n(\omega) = \frac{\varrho(\omega,T)}{\hbar\omega}
+>  = \underbrace{\frac{\omega^2}{\pi^2 c^3}}_{\text{mode density}}\cdot
+>    \underbrace{\frac{1}{e^{\hbar\omega/k_B T}-1}}_{\bar n(\omega)}
+> $$
+>
+> The "divide by $\hbar\omega$" step is exactly where the more-energetic-photon
+> idea lives — but it only turns the energy density's $\omega^3$ into $\omega^2$,
+> a factor that **grows** with frequency. On its own (more modes at higher
+> frequency) it would make high frequencies photon-*rich*. What actually makes
+> them poor is the **occupation per mode** $\bar n(\omega)$, which collapses like
+> $e^{-\hbar\omega/k_B T}$ once $\hbar\omega \gg k_B T$: it is thermodynamically
+> too costly to put even a single quantum into a high-energy mode, so those modes
+> sit empty. (The ratio above confirms it: its polynomial prefactor
+> $\hbar\omega_2^2/k_B T\omega_1$ is *greater* than $1$; only the exponential
+> drives the ratio below $1$.) So energy density is not equal across frequencies
+> — it is itself exponentially small at high frequency — which is the real reason,
+> with the $1/\hbar\omega$ effect a subdominant, already-absorbed piece.
+
 **Why "many photons" means wave and "few" means particle.** This is the step the
 text states but does not unpack — and it is the whole point. The bridge is the
 **mean number of photons in a single mode**,
