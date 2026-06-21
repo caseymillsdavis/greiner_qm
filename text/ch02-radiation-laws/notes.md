@@ -477,6 +477,42 @@ polarization, per unit solid angle**, so that $\varrho_\alpha = \tfrac{1}{8\pi}\
 are proportional to $\varrho_\alpha$ (more photons present → more transitions);
 spontaneous emission is not.
 
+> **Why the stimulated rates carry a photon-density factor (and spontaneous
+> emission does not).** Each rate above is a product of *three independent*
+> things: a coupling coefficient ($a$ or $b$) set by the atomic states; a field
+> factor ($\varrho_\alpha$, or nothing); and — once we balance transitions — the
+> number of atoms in the level ($N_m$ or $N_n$). The energy levels enter through
+> the coupling and through the resonance condition $\omega = (E_m - E_n)/\hbar$
+> that fixes *which* $\varrho_\alpha(\omega)$ appears; the factor of
+> $\varrho_\alpha$ itself answers only "how many resonant photons are present?"
+> So the levels are accounted for — just in different factors than $\varrho$.
+>
+> - **Absorption** needs a photon to swallow, so its rate scales with how many
+>   resonant photons are around — hence $\propto \varrho_\alpha$.
+> - **Emission comes in two kinds.** *Spontaneous* emission happens even in the
+>   dark (no field needed), so it does **not** depend on $\varrho$ — this is the
+>   $a$ term. *Stimulated* (induced) emission is an extra channel in which an
+>   already-present photon triggers the atom to emit a second, identical photon;
+>   the more photons present, the more triggering, so this part is
+>   $\propto \varrho_\alpha$ — the $b$ term. Your instinct that "emission needn't
+>   depend on the field" is right for the spontaneous piece; the $\varrho$ piece
+>   is the extra, stimulated one.
+>
+> Why does a passing photon trigger emission? Its field resonantly drives the
+> atomic dipole, and a drive at the transition frequency can push the atom
+> *down* just as easily as *up* — the coupling is symmetric, which is exactly
+> why $b^n_{m\alpha} = b^m_{n\alpha}$ in the next step. Equivalently, in the
+> quantum picture a mode already holding $n$ photons has emission rate
+> $\propto (n+1)$: the "$+1$" is spontaneous, the "$n$" (which is what
+> $\varrho_\alpha$ measures) is stimulated. Photons are bosons and pile into
+> occupied modes — the principle behind the **laser** (Light Amplification by
+> Stimulated Emission of Radiation).
+>
+> This term is not optional. With only spontaneous emission and absorption the
+> balance gives **Wien's law**, not Planck's; the stimulated term is what
+> produces the "$-1$" in $1/(e^{\hbar\omega/k_B T}-1)$ — the signature of Bose
+> statistics.
+
 ### The equilibrium condition
 
 In equilibrium the number of upward transitions equals the number of downward
