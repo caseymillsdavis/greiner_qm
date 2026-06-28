@@ -25,6 +25,77 @@ follows the curve only at long wavelengths (small abscissa) and shoots off to
 infinity; Wien (dashed) works only at short wavelengths; Planck (solid)
 interpolates correctly across the whole spectrum.
 
+### Reading the opening figure: the variable $hc/\lambda k_B T$
+
+The horizontal axis above is **not an intensity** — it is a **pure number**, and
+recognizing which number makes the whole chapter easier to read. It is the same
+dimensionless variable $x = \hbar\omega/k_B T$ used throughout §2.4–2.7, only
+dressed in wavelength language. Since $\hbar\cdot 2\pi = h$ and
+$\omega = 2\pi c/\lambda$,
+
+$$
+\frac{hc}{\lambda k_B T} = \frac{\hbar\omega}{k_B T} = x
+$$
+
+**A ratio of two energies.** Read the numerator and denominator separately:
+
+- $hc/\lambda = h\nu = \hbar\omega$ is the **energy of a single quantum** (photon)
+  of wavelength $\lambda$.
+- $k_B T$ is the **characteristic thermal energy** available at temperature $T$ —
+  the energy equipartition would hand to each mode (§2.3).
+
+So the abscissa is a "price-to-budget" ratio,
+
+$$
+\frac{hc}{\lambda k_B T} = \frac{\text{energy to make one quantum at } \lambda}{\text{thermal energy on offer}}
+$$
+
+and this one number decides which regime you are in:
+
+- $x \ll 1$ (cheap quantum: long wavelength or high $T$): thermal energy easily
+  affords many quanta per mode, $\bar n \approx k_B T/\hbar\omega \gg 1$ — the
+  **Rayleigh–Jeans / wave** regime.
+- $x \gg 1$ (expensive quantum: short wavelength or low $T$): even one quantum
+  costs more than $k_B T$, so $\bar n \approx e^{-x} \ll 1$ and the modes are
+  frozen empty — the **Wien / particle** regime.
+
+This is precisely the wave-vs-particle boundary made quantitative in §2.4.
+
+**Why this is the right axis: one universal curve.** Write Planck's law,
+Eq. (2.5), in terms of $x$ (using $\omega = k_B T x/\hbar$):
+
+$$
+\varrho(\omega,T) = \frac{\hbar\omega^3}{\pi^2 c^3}\frac{1}{e^{x}-1}
+= \frac{(k_B T)^3}{\pi^2 c^3 \hbar^2}\cdot\frac{x^3}{e^{x}-1}
+$$
+
+Temperature only sets the overall **height**; the **shape** is the universal
+function $x^3/(e^x-1)$ of $x$ alone. Plotting emittance against raw frequency
+would give a different curve for every $T$; plotting against
+$x = hc/\lambda k_B T$ collapses them onto a single master curve — a 6000 K star
+and the 2.7 K cosmic background (§2.9) trace the identical hump at different
+scales. Because $\lambda$ sits in the denominator, the wavelength axis runs
+**backwards**: moving right means shorter wavelength / higher frequency / bluer
+(or a colder body), which is why Rayleigh–Jeans holds at small abscissa (long
+$\lambda$) and Wien at large abscissa.
+
+**Reading the hump.** The spectral emittance is a product of two competing
+factors,
+
+$$
+\varrho(\omega,T) = \frac{\omega^2}{\pi^2 c^3}\cdot\frac{\hbar\omega}{e^{x}-1}
+\qquad (\text{mode density}) \times (\text{energy per mode})
+$$
+
+At small $x$ the energy per mode is healthy ($\bar\varepsilon \to k_B T$) and the
+modes are richly populated — but the **mode density $\propto \omega^2$ vanishes**,
+so there are almost no modes at long wavelength and the band emits little. (The
+low-$x$ end is dim from a **scarcity of modes**, *not* a shortage of photons per
+mode — this is the $\varrho \propto \omega^2$ rise of Rayleigh–Jeans.) At large
+$x$ there are plenty of modes but each is frozen nearly empty
+($\bar\varepsilon \to \hbar\omega e^{-x}$), a **scarcity of quanta per mode**. The
+peak sits between, at $x \approx 2.82$ (§2.7).
+
 ---
 
 ## 2.1 Preliminaries: radiation from bodies
