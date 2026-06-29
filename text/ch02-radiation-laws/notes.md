@@ -971,24 +971,76 @@ $$
 
 ### From energy density to radiated power
 
-Using the emittance relation, Eq. (2.2), a black surface radiates
+Part (b) computed the energy *stored* per unit volume, $E/V$. To compare with a
+star's emission we need the energy *radiated* per unit area of surface. The two
+differ by a geometric factor $c/4$, and it is worth deriving it in full rather
+than quoting it, because every piece carries physics.
+
+**Radiance: from a volume density to a directional rate.** The isotropic cavity
+field of energy density $E/V$ is described by its **radiance** (specific
+intensity) $K$, the energy crossing per unit area, per unit time, per unit solid
+angle, in a given direction (units $\text{erg}/\text{cm}^2 \text{s} \text{sr}$).
+For isotropic radiation streaming at speed $c$ in all $4\pi$ steradians,
 
 $$
-\varepsilon(T) = \frac{c}{4}\frac{E}{V} = \sigma T^4, \qquad
+K = \frac{c}{4\pi}\frac{E}{V} \qquad (\ast)
+$$
+
+the $c$ converting an energy *density* into an energy *flux* (energy moves at
+$c$), and the $4\pi$ sharing that flux equally over all directions.
+
+**Energy through a surface element.** Place a surface element $df$ at the origin
+with normal $z$, and let $\vartheta$ be the angle a ray makes with that normal,
+$\varphi$ the azimuth. The energy leaving $df$ into the solid angle
+$d\Omega = \sin\vartheta  d\vartheta  d\varphi$ during time $dt$ is
+
+$$
+d^2U = K \cdot (\cos\vartheta  df) \cdot d\Omega \cdot dt.
+$$
+
+The factor $\cos\vartheta$ is the **Lambert (projection) factor** and is the
+crux: radiance is defined per unit area *perpendicular to the ray*, but a ray
+leaving at angle $\vartheta$ sees the patch foreshortened to its projection
+$df\cos\vartheta$ (a coin viewed face-on is a full disk; tilted, it shrinks to an
+ellipse). Equivalently, only the normal component of the flux crosses the
+surface.
+
+**Integrate over the forward hemisphere.** Summing over every direction the patch
+can radiate *into* — azimuth $\varphi$ over $0\dots 2\pi$, and polar angle
+$\vartheta$ over $0\dots\pi/2$ (the **forward** hemisphere only; $\vartheta>\pi/2$
+points back into the body and emits nothing):
+
+$$
+dU = K  df  dt \int_0^{2\pi} d\varphi \int_0^{\pi/2} \cos\vartheta\sin\vartheta  d\vartheta
+ = K  df  dt \cdot 2\pi \cdot \Big[\tfrac{1}{2}\sin^2\vartheta\Big]_0^{\pi/2}
+ = \pi K  df  dt.
+$$
+
+The factor $\pi$ packages two things: the $2\pi$ from the full azimuthal sweep,
+times the $\tfrac{1}{2}$ from the cosine-weighted hemisphere.
+
+**The emittance.** Dividing out $df$ and $dt$ gives the **emissive power per unit
+area**, and inserting $(\ast)$ collapses the geometry to the single factor $c/4$:
+
+$$
+\varepsilon(T) = \frac{d^2 E}{df  dt} = \pi K = \pi\cdot\frac{c}{4\pi}\frac{E}{V}
+ = \frac{c}{4}\frac{E}{V} = \sigma T^4, \qquad
 \sigma = \frac{c}{4}a \approx 5.4\times 10^{-5}\ \frac{\text{erg}}{\text{cm}^2 \text{s} \text{K}^4}
 $$
 
-(The factor $c/4$ comes from integrating $K\cos\vartheta$ over the forward
-hemisphere: $\varepsilon = \pi K = \tfrac{c}{4}\tfrac{E}{V}$.)
+so $c/4 = \pi \times c/4\pi$: the $\pi$ is the hemisphere integral above, the
+$c/4\pi$ is the density-to-radiance conversion $(\ast)$. This is the same
+"factor of $1/4$" met in §2.2 (Exercise 2.1) linking energy density to emitted
+flux.
 
 ![Emission from a surface element into the upper hemisphere](figures/fig-2.6-hemisphere.png)
 
 <!-- figure: cropped from source/p32.jpg -->
 The surface element $df$ radiates into the solid angle
 $d\Omega = \sin\vartheta  d\vartheta  d\varphi$ at angle $\vartheta$ to the
-normal $z$. Integrating the radiance $K$, weighted by the Lambert factor
-$\cos\vartheta$, over the forward hemisphere yields $\varepsilon = \pi K$, hence
-the factor $c/4$.
+normal $z$. Integrating the radiance $K$, weighted by the Lambert projection
+factor $\cos\vartheta$, over the forward hemisphere yields $\varepsilon = \pi K$,
+hence the factor $c/4$.
 
 ### Application: the temperature of the Sun
 
