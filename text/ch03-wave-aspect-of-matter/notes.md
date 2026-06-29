@@ -518,6 +518,14 @@ appears only when the reflections from one family of parallel planes interfere
 constructively — the **Bragg condition** $2d\sin\vartheta = n\lambda$ (with $n$
 integer, $\vartheta$ the angle between beam and net plane).
 
+![Two families of net planes in the same lattice, with spacings d and d'](figures/fig-3.7-net-planes.png)
+
+<!-- figure: cropped from source/p46.jpg -->
+The same crystal lattice can be sliced into many different families of parallel
+net planes — two are shown, with spacings $d$ and $d'$. Each family has its own
+spacing and its own orientation, hence its own fixed Bragg angle, which is why a
+single monochromatic beam usually satisfies none of them.
+
 The catch: for an *ideal, fixed* crystal the orientation already fixes $\vartheta$
 for each plane family, and $d$ and $\lambda$ are fixed too. With $d$, $\vartheta$,
 and $\lambda$ all determined, there is in general **no integer $n$** that satisfies
