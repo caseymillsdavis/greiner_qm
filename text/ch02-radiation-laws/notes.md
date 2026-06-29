@@ -896,6 +896,53 @@ $$
  = \frac{\hbar\omega^3}{\pi^2 c^3}\frac{1}{e^{\hbar\omega/k_B T}-1}
 $$
 
+### Aside: differential vs. ratio densities ($dE/dV$ vs. $E/V$)
+
+Greiner writes the energy density as the differential $dE/dV$ but then immediately
+uses $E/V$, i.e. $dE/dV = E/V$. It is worth being precise about what is a
+*definition* and what is a *physical claim*, because the same notation hides two
+different ideas.
+
+**The differential is the definition of a density.** Energy density is
+fundamentally a *local* quantity — the honest definition is the limit of energy
+in a small box divided by the box's volume,
+
+$$
+\varrho(\vec r) = \frac{dE}{dV} = \lim_{\Delta V\to 0}\frac{\Delta E}{\Delta V}.
+$$
+
+This makes no assumption that the field is uniform; it is the correct definition
+even when the density varies from point to point (like air density falling off
+with altitude). The total energy is recovered by integrating the local density,
+$E=\int_V \varrho  dV$.
+
+**The ratio $E/V$ is the bulk average** — one number for the whole cavity. In
+general the local density and the average are *not* equal.
+
+**They coincide here because the field is homogeneous.** In thermal equilibrium a
+closed cavity at uniform temperature $T$ has no preferred location, so the
+radiation field is spatially homogeneous and isotropic and $\varrho$ is constant.
+A constant pulls out of the integral, collapsing the differential to the ratio:
+
+$$
+E = \int_V \varrho  dV = \varrho \int_V dV = \varrho  V
+\quad\Longrightarrow\quad
+\varrho = \frac{dE}{dV} = \frac{E}{V}.
+$$
+
+Equivalently, this is just the statement that radiation energy is **extensive**:
+at fixed intensive parameters $E(V,T)=V  u(T)$ is linear in $V$, so
+$\partial E/\partial V|_T = u = E/V$. The derivative equals the ratio precisely
+because doubling the box doubles the energy.
+
+**Why start from the differential at all?** Because it is the rigorous definition,
+and because the *same* construction recurs for the spectral density $dE/d\omega$
+just above — but there it does **not** collapse to a ratio. The field is uniform
+in space (so $dE/dV \to E/V$) but it is *not* uniform in frequency (so $dE/d\omega$
+stays under the integral and never becomes $E/\omega$). The contrast is the
+cleanest way to remember when a "density" may be replaced by a ratio: only when
+the quantity it is differentiated against is one the field is homogeneous in.
+
 ### Integrating over all frequencies
 
 The total energy density is
