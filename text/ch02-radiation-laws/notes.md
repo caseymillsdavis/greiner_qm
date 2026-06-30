@@ -1085,21 +1085,42 @@ Graphical solution: the curves $e^x$ and $(1-x/3)^{-1}$ cross at $x_{\max}\appro
 2.82$. The second curve has a vertical asymptote at $x = 3$, so the crossing must
 lie just below it.
 
-> **A subtlety worth flagging.** The peak location depends on *which variable*
-> you bin by. The maximum of the density per unit **frequency** $\varrho(\omega)$
-> sits at $x\approx 2.82$; converting that frequency to a wavelength via
-> $\omega = 2\pi c/\lambda$ gives $\lambda T \approx 0.51\ \text{cm·K}$. But the
-> maximum of the density per unit **wavelength** $\varrho(\lambda)$ sits at a
-> *different* point (the Jacobian $|d\omega/d\lambda|\propto\lambda^{-2}$ shifts
-> it), namely $y\approx 4.965$, giving the standard Wien constant
+> **A subtlety worth flagging — the spectrum has two different "peaks."** A
+> spectral density is energy *per unit of binning variable*, so changing
+> variables brings in a Jacobian, not just a substitution:
+> $\varrho(\lambda) = \varrho(\omega)|d\omega/d\lambda|$ with
+> $|d\omega/d\lambda| = 2\pi c/\lambda^2$. That extra $\lambda^{-2}$ **moves the
+> maximum**, so "where does the spectrum peak?" has two legitimate answers:
+>
+> - **Per-frequency peak.** Maximizing $\varrho(\omega)$ gives
+>   $e^x = (1-x/3)^{-1}$, root $x = \hbar\omega/k_B T \approx 2.82$. Converting
+>   that *frequency* to a wavelength via $\omega = 2\pi c/\lambda$ gives
+>   $\lambda T = hc/(x k_B) \approx 0.51\ \text{cm·K}$.
+> - **Per-wavelength peak.** Maximizing $\varrho(\lambda)$ gives
+>   $e^y = (1-y/5)^{-1}$ — a $5$, not a $3$, precisely *because* of the
+>   $\lambda^{-2}$ Jacobian — root $y = hc/\lambda k_B T \approx 4.965$, so
+>   $\lambda T = hc/(y k_B) \approx 0.29\ \text{cm·K}$, the standard Wien constant
 
 $$
 \boxed{\lambda_{\max}  T \approx 0.29\ \text{cm·K} = 2.9\times 10^{-3}\ \text{m·K}} \qquad (2.10)
 $$
 
-For the Sun ($T\approx 6000$ K) this gives $\lambda_{\max} = 0.29/6000\ \text{cm}
-\approx 4800\ \text{Å}$ — yellow visible light. The estimate lands within ~20% of
-the exact value. The law says the hottest bodies glow at the shortest
+> **Greiner's text is internally inconsistent here — worth knowing so the jump in
+> the book doesn't puzzle you.** Aufgabe 2.4 explicitly defines $\lambda_{\max}$ as
+> "the wavelength at which $dE/d\omega$ is maximal" and correctly derives the
+> *frequency*-peak value $\lambda_{\max} T = 0.51\ \text{cm·K}$. But the Sun
+> calculation on the same page then silently substitutes $0.29$ (the
+> *wavelength*-peak constant, never derived in the text) to get
+> $\lambda_{\max} = 0.29/6000 \approx 4800\ \text{Å}$. He swaps because $0.29$ is
+> the experimentally meaningful one: it lands on the Sun's observed visible
+> (yellow) peak, whereas his own $0.51$ would give $\approx 8500\ \text{Å}$
+> (near-infrared), the wrong place. The two numbers are not a calculation error —
+> they are the two different peaks above, and the book uses one for the derivation
+> and the other for the application without flagging the switch.
+
+For the Sun ($T\approx 6000$ K), using the standard constant $\lambda_{\max} =
+0.29/6000\ \text{cm} \approx 4800\ \text{Å}$ — yellow visible light, within ~20%
+of the exact value. The law says the hottest bodies glow at the shortest
 wavelengths (red-hot → white-hot → blue), and lets one read a star's temperature
 from the colour of its peak.
 
