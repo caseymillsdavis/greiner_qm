@@ -92,8 +92,7 @@ we ask how fast the wave "moves." Holding $\alpha$ fixed and differentiating alo
 the motion,
 
 $$
-\frac{d\alpha}{dt} = \omega - \vec k\cdot\dot{\vec r}
- = \omega - \vec k\cdot\vec u = 0
+\frac{d\alpha}{dt} = \omega - \vec k\cdot\dot{\vec r} = \omega - \vec k\cdot\vec u = 0
 $$
 
 where $\vec u = \dot{\vec r}$ is the velocity of the constant-phase surface. Since
@@ -151,8 +150,7 @@ $$
 There is a cleaner exact form. Using (1) and (2) directly,
 
 $$
-u = \frac{\omega}{k} = \frac{\hbar\omega}{\hbar k} = \frac{E}{p}
- = \frac{mc^2}{mv} = \frac{c^2}{v}
+u = \frac{\omega}{k} = \frac{\hbar\omega}{\hbar k} = \frac{E}{p} = \frac{mc^2}{mv} = \frac{c^2}{v}
 $$
 
 Since the particle is massive it moves slower than light, $v < c$, so
@@ -199,8 +197,7 @@ since $d\vec s/dt = \vec v$. Because $\vec v$ and $\vec p$ are parallel,
 $d\vec p\cdot\vec v = v dp$, so
 
 $$
-\frac{dE}{dp} = v \qquad\Longrightarrow\qquad
-\boxed{v_g = v}
+\frac{dE}{dp} = v \qquad\Longrightarrow\qquad \boxed{v_g = v}
 $$
 
 **The group velocity of the matter wave is the ordinary velocity of the particle.**
@@ -228,8 +225,7 @@ A single plane wave (3) fills all space and cannot represent a particle that is
 around a central $k_0$ — a **wave packet**. Taking a group running along $x$:
 
 $$
-\psi(x,t) = \int_{k_0-\Delta k}^{k_0+\Delta k} c(k) e^{i(kx - \omega(k)t)} dk
-\qquad (6)
+\psi(x,t) = \int_{k_0-\Delta k}^{k_0+\Delta k} c(k) e^{i(kx - \omega(k)t)} dk \qquad (6)
 $$
 
 Here $k_0 = 2\pi/\lambda_0$ is the mean wavenumber and $\Delta k$ measures the
@@ -238,8 +234,7 @@ is narrow we may **Taylor-expand** $\omega(k)$ about $k_0$ and drop terms of ord
 $(k-k_0)^2$ and higher:
 
 $$
-\omega(k) = \omega(k_0) + \left(\frac{d\omega}{dk}\right)_{k_0}(k-k_0)
- + \frac{1}{2}\left(\frac{d^2\omega}{dk^2}\right)_{k_0}(k-k_0)^2 + \cdots \qquad (7)
+\omega(k) = \omega(k_0) + \left(\frac{d\omega}{dk}\right)_{k_0}(k-k_0) + \frac{1}{2}\left(\frac{d^2\omega}{dk^2}\right)_{k_0}(k-k_0)^2 + \cdots \qquad (7)
 $$
 
 Introduce $\xi = k - k_0$ as the integration variable and identify the
@@ -254,8 +249,7 @@ $$
 so
 
 $$
-\psi(x,t) = e^{i(k_0 x - \omega(k_0)t)}
-\int_{-\Delta k}^{\Delta k} e^{i(x - v_g t)\xi} c(k_0+\xi) d\xi \qquad (6a)
+\psi(x,t) = e^{i(k_0 x - \omega(k_0)t)} \int_{-\Delta k}^{\Delta k} e^{i(x - v_g t)\xi} c(k_0+\xi) d\xi \qquad (6a)
 $$
 
 ### Doing the integral
@@ -264,9 +258,7 @@ Treat the amplitude as slowly varying across the narrow band, $c(k_0+\xi)\approx
 c(k_0)$, and pull it out. The remaining integral is elementary:
 
 $$
-\int_{-\Delta k}^{\Delta k} e^{i(x-v_g t)\xi} d\xi
- = \frac{e^{i(x-v_g t)\Delta k} - e^{-i(x-v_g t)\Delta k}}{i(x-v_g t)}
- = \frac{2\sin\big(\Delta k (x-v_g t)\big)}{x - v_g t}
+\int_{-\Delta k}^{\Delta k} e^{i(x-v_g t)\xi} d\xi = \frac{e^{i(x-v_g t)\Delta k} - e^{-i(x-v_g t)\Delta k}}{i(x-v_g t)} = \frac{2\sin\big(\Delta k (x-v_g t)\big)}{x - v_g t}
 $$
 
 Therefore
@@ -288,8 +280,7 @@ $C(x,t)$.
 Put $z = \Delta k (x - v_g t)$, so $C \propto \sin z / z$. This function
 
 $$
-\lim_{z\to 0}\frac{\sin z}{z} = 1 \quad (z=0), \qquad
-\frac{\sin z}{z} = 0 \quad (z = \pm\pi),
+\lim_{z\to 0}\frac{\sin z}{z} = 1 \quad (z=0), \qquad \frac{\sin z}{z} = 0 \quad (z = \pm\pi),
 $$
 
 has a tall central peak at $z = 0$ and only small, fast-decaying side lobes. So the
@@ -317,9 +308,7 @@ group velocity. The same follows from demanding $|\psi(x,t)|^2 = \text{const}$: 
 the dispersion relation (5) pins the value down nonrelativistically:
 
 $$
-v_g = \left(\frac{d\omega}{dk}\right)_{k_0}
- = \left(\frac{\hbar k}{m_0}\right)_{k_0}
- = \frac{\hbar k_0}{m_0} = \frac{p}{m_0} = v
+v_g = \left(\frac{d\omega}{dk}\right)_{k_0} = \left(\frac{\hbar k}{m_0}\right)_{k_0} = \frac{\hbar k_0}{m_0} = \frac{p}{m_0} = v
 $$
 
 consistent with §3.3.
@@ -481,8 +470,7 @@ the small-angle form $2\theta \approx D/2L$ (so $\theta \approx D/4L$) with the
 Bragg condition $2d\theta = n\lambda$:
 
 $$
-2d\cdot\frac{D}{4L} = n\lambda \qquad\Longrightarrow\qquad
-\boxed{Dd = 2nL\lambda}
+2d\cdot\frac{D}{4L} = n\lambda \qquad\Longrightarrow\qquad \boxed{Dd = 2nL\lambda}
 $$
 
 Finally, for electrons accelerated through $U$, substituting
