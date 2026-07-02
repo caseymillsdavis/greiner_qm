@@ -220,9 +220,42 @@ the *group* velocity, which is what actually carries the particle's energy and
 
 <!-- source: source/p40.jpg, source/p41.jpg, source/p42.jpg -->
 
-A single plane wave (3) fills all space and cannot represent a particle that is
-*here* and not *there*. To localize it we superpose a narrow band of wavenumbers
-around a central $k_0$ — a **wave packet**. Taking a group running along $x$:
+### Why a single plane wave cannot localize a particle
+
+It is tempting to object that the plane wave (3) *does* move — its crests travel
+at the phase velocity — so why can it not represent a moving particle? The catch
+is that **propagation of the wave is not the same as a localized lump being
+somewhere and moving.** The quantity that says *where* the particle is likely to
+be found is not $\psi$ itself but the **probability density** $|\psi|^2$ (the Born
+rule, formalized later); "here and not there" means $|\psi|^2$ is peaked at one
+place and small elsewhere. For the plane wave the exponentials cancel exactly:
+
+$$
+|\psi(\vec r,t)|^2 = \psi^*\psi = A^* e^{-i(\vec k\cdot\vec r - \omega t)} A e^{i(\vec k\cdot\vec r - \omega t)} = |A|^2
+$$
+
+so $|\psi|^2 = |A|^2$ is **constant over all space and all time** — the particle is
+equally likely to be found *anywhere*. That is maximal *de*localization, the
+opposite of "here and not there."
+
+The crests do slide along, but they are identical everywhere, so nothing on the
+infinite wave marks a location; meanwhile the one quantity that could mark a
+location, $|\psi|^2$, is flat and does not move at all. (Picture an endless,
+perfectly uniform ocean swell: the crests travel, yet there is no *pulse* sitting
+at any particular spot. A single splash, by contrast, makes a localized ripple
+*packet* that is somewhere and moves.)
+
+The deeper reason is complementarity: a single plane wave has one sharp
+wavenumber $\vec k$, hence — via $\vec p = \hbar\vec k$ — one **exactly defined
+momentum**, and a perfectly sharp momentum forces a completely indefinite
+position (the uncertainty principle, Chapter 4). To localize the particle we must
+give up sharp momentum and superpose a *band* of wavenumbers, so that the
+exponentials no longer cancel and interference can build a bump.
+
+### Building the packet
+
+So to localize the particle we superpose a narrow band of wavenumbers around a
+central $k_0$ — a **wave packet**. Taking a group running along $x$:
 
 $$
 \psi(x,t) = \int_{k_0-\Delta k}^{k_0+\Delta k} c(k) e^{i(kx - \omega(k)t)} dk \qquad (6)
