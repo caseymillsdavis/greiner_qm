@@ -336,9 +336,42 @@ x - v_g t = 0 \qquad\Longrightarrow\qquad \frac{dx}{dt} = v_g
 $$
 
 so the surface of fixed amplitude — and the whole packet with it — travels at the
-group velocity. The same follows from demanding $|\psi(x,t)|^2 = \text{const}$: by
-(8) this needs $x - v_g t = \text{const}$, hence $\dot x = v_g$ again. Differentiating
-the dispersion relation (5) pins the value down nonrelativistically:
+group velocity.
+
+**A second route: the probability density is a rigid traveling profile.** The same
+conclusion follows from tracking the probability density $|\psi|^2$ rather than the
+peak. First, "demanding $|\psi|^2 = \text{const}$" does **not** mean the density is
+uniform (contrast the plane wave at the start of the section); it means we pick the
+value of $|\psi|^2$ at whatever feature of the bump we want to follow — the peak, a
+half-maximum point, any contour — and track the locus where the density keeps that
+value. Take the modulus squared of (8); the carrier has modulus one,
+$|e^{i(k_0 x - \omega_0 t)}| = 1$, so it drops out and only the envelope survives:
+
+$$
+|\psi(x,t)|^2 = |C(x,t)|^2 = 4 |c(k_0)|^2 \frac{\sin^2\big(\Delta k (x - v_g t)\big)}{(x - v_g t)^2} = F(x - v_g t)
+$$
+
+The density depends on $x$ and $t$ **only through the combination** $s = x - v_g t$
+— the signature of a fixed shape sliding along at speed $v_g$ without deforming.
+Holding the density at a feature's value pins that combination, and differentiating
+gives the speed:
+
+$$
+F(s) = \text{const} \quad\Longrightarrow\quad s = x - v_g t = \text{const} \quad\Longrightarrow\quad \frac{dx}{dt} = v_g
+$$
+
+Because this holds for *every* contour value, the whole packet translates together
+at $v_g$. Two things are worth noticing. The fast carrier underneath travels at the
+phase velocity $c^2/v > c$, but with modulus one it cancels out of $|\psi|^2$
+entirely — the physical density cannot see it, which is exactly why the particle
+moves at the group velocity and not the (superluminal) phase velocity. And the
+clean result relied on dropping the second-order phase term: keep
+$\tfrac{1}{2}\omega''\xi^2 t$ and $|\psi|^2$ would depend on $x$ and $t$ separately,
+the profile would change shape as it moves (spreading), and no single rigid speed
+would exist — consistent with the caveat below.
+
+Either way, differentiating the dispersion relation (5) pins the value down
+nonrelativistically:
 
 $$
 v_g = \left(\frac{d\omega}{dk}\right)_{k_0} = \left(\frac{\hbar k}{m_0}\right)_{k_0} = \frac{\hbar k_0}{m_0} = \frac{p}{m_0} = v
