@@ -231,7 +231,7 @@ rule, formalized later); "here and not there" means $|\psi|^2$ is peaked at one
 place and small elsewhere. For the plane wave the exponentials cancel exactly:
 
 $$
-|\psi(\vec r,t)|^2 = \psi^*\psi = A^* e^{-i(\vec k\cdot\vec r - \omega t)} A e^{i(\vec k\cdot\vec r - \omega t)} = |A|^2
+|\psi(\vec r,t)|^2 = \psi^\ast\psi = A^\ast e^{-i(\vec k\cdot\vec r - \omega t)} A e^{i(\vec k\cdot\vec r - \omega t)} = |A|^2
 $$
 
 so $|\psi|^2 = |A|^2$ is **constant over all space and all time** — the particle is
