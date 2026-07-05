@@ -48,7 +48,7 @@ PDF if a polished build is ever wanted.
 |---------|-------|--------|
 | [1](text/ch01-quantization-of-physical-quantities/notes.md) | The Quantization of Physical Quantities | Notes complete (pp. 1–11), figures included |
 | [2](text/ch02-radiation-laws/notes.md) | Radiation Laws (*Strahlungsgesetze*) | Notes complete (pp. 12–36); figures pending |
-| [3](text/ch03-wave-aspect-of-matter/notes.md) | The Wave Aspect of Matter (*Der Wellenaspekt der Materie*) | Notes in progress (pp. 37–46: de Broglie waves), figures included |
+| [3](text/ch03-wave-aspect-of-matter/notes.md) | The Wave Aspect of Matter (*Der Wellenaspekt der Materie*) | Notes in progress (pp. 37–66: de Broglie waves, statistical interpretation, operators, uncertainty), figures included |
 
 ## Working with Claude
 
