@@ -871,6 +871,31 @@ finite $\int|\psi|^2$. Free states lie *above* the well and extend without
 bound — think of the plane wave, whose $|\psi|^2 = \text{const}$ integrates to
 infinity over all space.
 
+> **Reading the figure, and why $E < 0$ is not exotic.** The horizontal axis
+> is position $r$; the vertical axis is energy, carrying two kinds of objects:
+> the curve $V(r)$ and the horizontal lines $E_1, E_2, E_3$ (a state's total
+> energy is one number, hence a flat line). Energy has no absolute zero — only
+> differences matter — and the convention here is $V(\infty) = 0$: a particle
+> at rest infinitely far away has zero energy, exactly as in gravity's
+> $V = -GMm/r$. Since $E = T + V$ and $T \geq 0$, a state with $E < 0$ can
+> never reach large $r$ (there $V \approx 0$ would force $T < 0$) — it is
+> trapped between the turning points where the line $E_n$ meets the curve
+> $V(r)$: **bound**. A state with $E > 0$ arrives at infinity with kinetic
+> energy to spare: **free**, for *any* positive energy — hence a continuum,
+> not levels. So $E < 0$ is measured relative to *escape*, not relative to
+> the ground state; $E_1$ is merely the lowest of the negative levels. In
+> hydrogen: $E_n = -13.6\ \text{eV}/n^2$, and $|E_1| = 13.6\ \text{eV}$ is
+> precisely the ionization energy — the lift from the ground state up to the
+> $E = 0$ threshold of freedom. (Classical counterpart: $E<0$ elliptical
+> orbits, $E>0$ hyperbolic flybys, $E=0$ the escape-velocity boundary.) Two
+> quantum extras in the picture: only *discrete* energies fit in the well —
+> and $E_1$ sits above the well's bottom, since confining the particle costs
+> zero-point kinetic energy $\sim\hbar^2/2m\Delta x^2$ (the box argument of
+> Example 3.6). Caveat: "bound iff $E<0$" is shorthand for potentials
+> vanishing at infinity; the invariant statement is $E < V(\infty)$ — for a
+> potential that never flattens (harmonic oscillator), every state is bound
+> at positive energy.
+
 ### The phase is not physical
 
 A normalized wavefunction is determined only **up to a phase factor of modulus
