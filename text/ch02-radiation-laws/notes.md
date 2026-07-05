@@ -896,6 +896,53 @@ $$
  = \frac{\hbar\omega^3}{\pi^2 c^3}\frac{1}{e^{\hbar\omega/k_B T}-1}
 $$
 
+### Aside: differential vs. ratio densities ($dE/dV$ vs. $E/V$)
+
+Greiner writes the energy density as the differential $dE/dV$ but then immediately
+uses $E/V$, i.e. $dE/dV = E/V$. It is worth being precise about what is a
+*definition* and what is a *physical claim*, because the same notation hides two
+different ideas.
+
+**The differential is the definition of a density.** Energy density is
+fundamentally a *local* quantity — the honest definition is the limit of energy
+in a small box divided by the box's volume,
+
+$$
+\varrho(\vec r) = \frac{dE}{dV} = \lim_{\Delta V\to 0}\frac{\Delta E}{\Delta V}.
+$$
+
+This makes no assumption that the field is uniform; it is the correct definition
+even when the density varies from point to point (like air density falling off
+with altitude). The total energy is recovered by integrating the local density,
+$E=\int_V \varrho  dV$.
+
+**The ratio $E/V$ is the bulk average** — one number for the whole cavity. In
+general the local density and the average are *not* equal.
+
+**They coincide here because the field is homogeneous.** In thermal equilibrium a
+closed cavity at uniform temperature $T$ has no preferred location, so the
+radiation field is spatially homogeneous and isotropic and $\varrho$ is constant.
+A constant pulls out of the integral, collapsing the differential to the ratio:
+
+$$
+E = \int_V \varrho  dV = \varrho \int_V dV = \varrho  V
+\quad\Longrightarrow\quad
+\varrho = \frac{dE}{dV} = \frac{E}{V}.
+$$
+
+Equivalently, this is just the statement that radiation energy is **extensive**:
+at fixed intensive parameters $E(V,T)=V  u(T)$ is linear in $V$, so
+$\partial E/\partial V|_T = u = E/V$. The derivative equals the ratio precisely
+because doubling the box doubles the energy.
+
+**Why start from the differential at all?** Because it is the rigorous definition,
+and because the *same* construction recurs for the spectral density $dE/d\omega$
+just above — but there it does **not** collapse to a ratio. The field is uniform
+in space (so $dE/dV \to E/V$) but it is *not* uniform in frequency (so $dE/d\omega$
+stays under the integral and never becomes $E/\omega$). The contrast is the
+cleanest way to remember when a "density" may be replaced by a ratio: only when
+the quantity it is differentiated against is one the field is homogeneous in.
+
 ### Integrating over all frequencies
 
 The total energy density is
@@ -924,24 +971,76 @@ $$
 
 ### From energy density to radiated power
 
-Using the emittance relation, Eq. (2.2), a black surface radiates
+Part (b) computed the energy *stored* per unit volume, $E/V$. To compare with a
+star's emission we need the energy *radiated* per unit area of surface. The two
+differ by a geometric factor $c/4$, and it is worth deriving it in full rather
+than quoting it, because every piece carries physics.
+
+**Radiance: from a volume density to a directional rate.** The isotropic cavity
+field of energy density $E/V$ is described by its **radiance** (specific
+intensity) $K$, the energy crossing per unit area, per unit time, per unit solid
+angle, in a given direction (units $\text{erg}/\text{cm}^2 \text{s} \text{sr}$).
+For isotropic radiation streaming at speed $c$ in all $4\pi$ steradians,
 
 $$
-\varepsilon(T) = \frac{c}{4}\frac{E}{V} = \sigma T^4, \qquad
+K = \frac{c}{4\pi}\frac{E}{V} \qquad (\ast)
+$$
+
+the $c$ converting an energy *density* into an energy *flux* (energy moves at
+$c$), and the $4\pi$ sharing that flux equally over all directions.
+
+**Energy through a surface element.** Place a surface element $df$ at the origin
+with normal $z$, and let $\vartheta$ be the angle a ray makes with that normal,
+$\varphi$ the azimuth. The energy leaving $df$ into the solid angle
+$d\Omega = \sin\vartheta  d\vartheta  d\varphi$ during time $dt$ is
+
+$$
+d^2U = K \cdot (\cos\vartheta  df) \cdot d\Omega \cdot dt.
+$$
+
+The factor $\cos\vartheta$ is the **Lambert (projection) factor** and is the
+crux: radiance is defined per unit area *perpendicular to the ray*, but a ray
+leaving at angle $\vartheta$ sees the patch foreshortened to its projection
+$df\cos\vartheta$ (a coin viewed face-on is a full disk; tilted, it shrinks to an
+ellipse). Equivalently, only the normal component of the flux crosses the
+surface.
+
+**Integrate over the forward hemisphere.** Summing over every direction the patch
+can radiate *into* — azimuth $\varphi$ over $0\dots 2\pi$, and polar angle
+$\vartheta$ over $0\dots\pi/2$ (the **forward** hemisphere only; $\vartheta>\pi/2$
+points back into the body and emits nothing):
+
+$$
+dU = K  df  dt \int_0^{2\pi} d\varphi \int_0^{\pi/2} \cos\vartheta\sin\vartheta  d\vartheta
+ = K  df  dt \cdot 2\pi \cdot \Big[\tfrac{1}{2}\sin^2\vartheta\Big]_0^{\pi/2}
+ = \pi K  df  dt.
+$$
+
+The factor $\pi$ packages two things: the $2\pi$ from the full azimuthal sweep,
+times the $\tfrac{1}{2}$ from the cosine-weighted hemisphere.
+
+**The emittance.** Dividing out $df$ and $dt$ gives the **emissive power per unit
+area**, and inserting $(\ast)$ collapses the geometry to the single factor $c/4$:
+
+$$
+\varepsilon(T) = \frac{d^2 E}{df  dt} = \pi K = \pi\cdot\frac{c}{4\pi}\frac{E}{V}
+ = \frac{c}{4}\frac{E}{V} = \sigma T^4, \qquad
 \sigma = \frac{c}{4}a \approx 5.4\times 10^{-5}\ \frac{\text{erg}}{\text{cm}^2 \text{s} \text{K}^4}
 $$
 
-(The factor $c/4$ comes from integrating $K\cos\vartheta$ over the forward
-hemisphere: $\varepsilon = \pi K = \tfrac{c}{4}\tfrac{E}{V}$.)
+so $c/4 = \pi \times c/4\pi$: the $\pi$ is the hemisphere integral above, the
+$c/4\pi$ is the density-to-radiance conversion $(\ast)$. This is the same
+"factor of $1/4$" met in §2.2 (Exercise 2.1) linking energy density to emitted
+flux.
 
 ![Emission from a surface element into the upper hemisphere](figures/fig-2.6-hemisphere.png)
 
 <!-- figure: cropped from source/p32.jpg -->
 The surface element $df$ radiates into the solid angle
 $d\Omega = \sin\vartheta  d\vartheta  d\varphi$ at angle $\vartheta$ to the
-normal $z$. Integrating the radiance $K$, weighted by the Lambert factor
-$\cos\vartheta$, over the forward hemisphere yields $\varepsilon = \pi K$, hence
-the factor $c/4$.
+normal $z$. Integrating the radiance $K$, weighted by the Lambert projection
+factor $\cos\vartheta$, over the forward hemisphere yields $\varepsilon = \pi K$,
+hence the factor $c/4$.
 
 ### Application: the temperature of the Sun
 
@@ -986,21 +1085,42 @@ Graphical solution: the curves $e^x$ and $(1-x/3)^{-1}$ cross at $x_{\max}\appro
 2.82$. The second curve has a vertical asymptote at $x = 3$, so the crossing must
 lie just below it.
 
-> **A subtlety worth flagging.** The peak location depends on *which variable*
-> you bin by. The maximum of the density per unit **frequency** $\varrho(\omega)$
-> sits at $x\approx 2.82$; converting that frequency to a wavelength via
-> $\omega = 2\pi c/\lambda$ gives $\lambda T \approx 0.51\ \text{cm·K}$. But the
-> maximum of the density per unit **wavelength** $\varrho(\lambda)$ sits at a
-> *different* point (the Jacobian $|d\omega/d\lambda|\propto\lambda^{-2}$ shifts
-> it), namely $y\approx 4.965$, giving the standard Wien constant
+> **A subtlety worth flagging — the spectrum has two different "peaks."** A
+> spectral density is energy *per unit of binning variable*, so changing
+> variables brings in a Jacobian, not just a substitution:
+> $\varrho(\lambda) = \varrho(\omega)|d\omega/d\lambda|$ with
+> $|d\omega/d\lambda| = 2\pi c/\lambda^2$. That extra $\lambda^{-2}$ **moves the
+> maximum**, so "where does the spectrum peak?" has two legitimate answers:
+>
+> - **Per-frequency peak.** Maximizing $\varrho(\omega)$ gives
+>   $e^x = (1-x/3)^{-1}$, root $x = \hbar\omega/k_B T \approx 2.82$. Converting
+>   that *frequency* to a wavelength via $\omega = 2\pi c/\lambda$ gives
+>   $\lambda T = hc/(x k_B) \approx 0.51\ \text{cm·K}$.
+> - **Per-wavelength peak.** Maximizing $\varrho(\lambda)$ gives
+>   $e^y = (1-y/5)^{-1}$ — a $5$, not a $3$, precisely *because* of the
+>   $\lambda^{-2}$ Jacobian — root $y = hc/\lambda k_B T \approx 4.965$, so
+>   $\lambda T = hc/(y k_B) \approx 0.29\ \text{cm·K}$, the standard Wien constant
 
 $$
 \boxed{\lambda_{\max}  T \approx 0.29\ \text{cm·K} = 2.9\times 10^{-3}\ \text{m·K}} \qquad (2.10)
 $$
 
-For the Sun ($T\approx 6000$ K) this gives $\lambda_{\max} = 0.29/6000\ \text{cm}
-\approx 4800\ \text{Å}$ — yellow visible light. The estimate lands within ~20% of
-the exact value. The law says the hottest bodies glow at the shortest
+> **Greiner's text is internally inconsistent here — worth knowing so the jump in
+> the book doesn't puzzle you.** Aufgabe 2.4 explicitly defines $\lambda_{\max}$ as
+> "the wavelength at which $dE/d\omega$ is maximal" and correctly derives the
+> *frequency*-peak value $\lambda_{\max} T = 0.51\ \text{cm·K}$. But the Sun
+> calculation on the same page then silently substitutes $0.29$ (the
+> *wavelength*-peak constant, never derived in the text) to get
+> $\lambda_{\max} = 0.29/6000 \approx 4800\ \text{Å}$. He swaps because $0.29$ is
+> the experimentally meaningful one: it lands on the Sun's observed visible
+> (yellow) peak, whereas his own $0.51$ would give $\approx 8500\ \text{Å}$
+> (near-infrared), the wrong place. The two numbers are not a calculation error —
+> they are the two different peaks above, and the book uses one for the derivation
+> and the other for the application without flagging the switch.
+
+For the Sun ($T\approx 6000$ K), using the standard constant $\lambda_{\max} =
+0.29/6000\ \text{cm} \approx 4800\ \text{Å}$ — yellow visible light, within ~20%
+of the exact value. The law says the hottest bodies glow at the shortest
 wavelengths (red-hot → white-hot → blue), and lets one read a star's temperature
 from the colour of its peak.
 
