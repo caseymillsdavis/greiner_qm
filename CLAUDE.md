@@ -47,6 +47,11 @@ When given one or more screenshots from the text:
   `\;` as a semicolon (e.g. `\boxed{\;x\;}` shows as `;x;`). Use a normal space,
   or `\quad`/`\qquad` (backslash-letters, which are safe). Most backslash-letter
   commands (`\frac`, `\sqrt`, `\hbar`, `\nabla`, …) are unaffected.
+- **Never write literal `\{` or `\}` in math** — same backslash-punctuation
+  mangling: the backslash is eaten, so `\left\{` reaches MathJax as `\left{`
+  and errors with "Missing or unrecognized delimiter for \left", while bare
+  `\{...\}` set braces silently disappear. Use `\lbrace` / `\rbrace` instead
+  (and `\left\lbrace ... \right\rbrace` for sized delimiters).
 - **`\operatorname{...}` is *not* allowed** by GitHub's MathJax subset ("The
   following macros are not allowed: operatorname"). For named operators use a
   built-in (`\nabla` for grad/div/curl, `\sin`, `\log`, …) or `\mathrm{...}`.

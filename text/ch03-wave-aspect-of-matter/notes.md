@@ -998,7 +998,7 @@ $e^{ik_x x} = e^{ik_x(x+L)}$ forces $e^{ik_x L} = 1$, i.e. $k_x L$ must be an
 integer multiple of $2\pi$ — and likewise for $y$ and $z$. So
 
 $$
-\vec k = \frac{2\pi}{L}\vec n, \qquad \vec k = \{k_x,k_y,k_z\}, \qquad \vec n = \{n_x,n_y,n_z\}
+\vec k = \frac{2\pi}{L}\vec n, \qquad \vec k = \lbrace k_x,k_y,k_z\rbrace, \qquad \vec n = \lbrace n_x,n_y,n_z\rbrace
 $$
 
 or in components
@@ -1079,7 +1079,7 @@ orthogonal (in the sense of (19)) to *all* the $\psi_{\vec k}$. Completeness
 is what guarantees the expansions of the next section lose nothing.
 
 > **Why orthonormality matters.** It is the exact analogue of an orthonormal
-> basis $\{\hat e_i\}$ in ordinary vector algebra, with the integral
+> basis $\lbrace\hat e_i\rbrace$ in ordinary vector algebra, with the integral
 > $\int\psi^\ast\varphi dV$ playing the role of the dot product. Just as
 > $\hat e_i\cdot\hat e_j = \delta_{ij}$ lets you extract a vector's components
 > by projection, (19) will let us extract a wavefunction's plane-wave
@@ -1313,7 +1313,7 @@ with a sign flip — turning $+i\hbar\vec\nabla$ (acting on $\psi_{\vec k}^\ast$
 into $-i\hbar\vec\nabla$ (acting on $\psi$). Thus
 
 $$
-\langle\vec p\rangle = \int_V\int_{V'}\left\{\psi^\ast(\vec r')\left(-i\hbar\vec\nabla\psi(\vec r)\right)\sum_{\vec k}\psi_{\vec k}(\vec r')\psi_{\vec k}^\ast(\vec r)\right\} dV\ dV' \qquad (26)
+\langle\vec p\rangle = \int_V\int_{V'}\left\lbrace\psi^\ast(\vec r')\left(-i\hbar\vec\nabla\psi(\vec r)\right)\sum_{\vec k}\psi_{\vec k}(\vec r')\psi_{\vec k}^\ast(\vec r)\right\rbrace dV\ dV' \qquad (26)
 $$
 
 **Step 3: collapse the sum with the completeness relation.** The remaining
@@ -2496,7 +2496,7 @@ $$
 so
 
 $$
-\alpha(k) = \frac{A}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\exp\left\{-\left(\frac{x}{\sqrt{2}a} + \frac{ia(k-k_0)}{\sqrt{2}}\right)^2\right\}\exp\left(-\frac{a^2(k-k_0)^2}{2}\right)dx
+\alpha(k) = \frac{A}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\exp\left\lbrace-\left(\frac{x}{\sqrt{2}a} + \frac{ia(k-k_0)}{\sqrt{2}}\right)^2\right\rbrace\exp\left(-\frac{a^2(k-k_0)^2}{2}\right)dx
 $$
 
 Substituting the bracket by $-\xi^2$ (i.e. $\xi$ = the bracketed quantity,
