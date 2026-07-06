@@ -1383,7 +1383,11 @@ $$
 $$
 
 and, by linearity, of any entire rational function
-$F(\vec p) = \sum_\nu a_\nu \vec p^{\ \nu}$ of the momentum:
+$F(\vec p) = \sum_\nu a_\nu \vec p^{\ \nu}$ of the momentum ("entire rational
+function" — *ganze rationale Funktion* — is the German term for a
+**polynomial**: whole powers only, no denominators; substituting an operator
+into anything else, say $1/p$, would need the spectral tools of later
+chapters):
 
 $$
 \langle F(\vec p)\rangle = \int_V \psi^\ast(\vec r)\hat F(-i\hbar\vec\nabla)\psi(\vec r)\ dV
