@@ -55,6 +55,12 @@ When given one or more screenshots from the text:
 - **`\operatorname{...}` is *not* allowed** by GitHub's MathJax subset ("The
   following macros are not allowed: operatorname"). For named operators use a
   built-in (`\nabla` for grad/div/curl, `\sin`, `\log`, …) or `\mathrm{...}`.
+- **Don't write two or more paren-subscript groups like `(\hat e_i)_a (\hat e_i)_b`
+  in one inline `$...$` span** — GitHub's emphasis pass pairs those underscores
+  as italics markers and destroys the math span (the LaTeX shows literally,
+  minus the underscores). Put such formulas on their own `$$...$$` display
+  line instead. Single groups with braced subscripts, e.g. `(d\omega/dk)_{k_0}`,
+  are fine.
 - **Don't put inline `$...$` math inside emphasis** (`*italic*` or `**bold**`) —
   GitHub renders it raw (you see the literal `$...$`). Math sitting *next to*
   emphasis on the same line is fine; only math *inside* the `*...*` span breaks.
