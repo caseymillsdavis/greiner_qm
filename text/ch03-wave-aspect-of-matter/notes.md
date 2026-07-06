@@ -1323,8 +1323,15 @@ $$
 \sum_{\vec k}\psi_{\vec k}(\vec r')\psi_{\vec k}^\ast(\vec r) = \delta(\vec r' - \vec r) \qquad (27)
 $$
 
-— the **Dirac delta function**, i.e. the continuum analogue of the identity
-matrix $\sum_i (\hat e_i)_a (\hat e_i)_b = \delta_{ab}$. Proof: expand
+— the **Dirac delta function**, i.e. the continuum analogue of the
+component-wise identity-matrix statement from ordinary vector algebra (the
+"resolution of the identity"),
+
+$$
+\sum_i (\hat e_i)_a (\hat e_i)_b = \delta_{ab}
+$$
+
+Proof of (27): expand
 $\delta(\vec r' - \vec r)$, as a function of $\vec r$, in the complete system
 $\psi_{\vec k}(\vec r) = V^{-1/2}e^{i\vec k\cdot\vec r}$:
 
