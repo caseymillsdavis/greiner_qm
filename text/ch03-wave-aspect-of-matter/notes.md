@@ -1550,8 +1550,10 @@ $$
 E = \langle\hat T + \hat V\rangle = \frac{1}{2}\frac{me^4}{\hbar^2} - \frac{me^4}{\hbar^2} = -\frac{1}{2}\frac{me^4}{\hbar^2}
 $$
 
-which is exactly the Bohr ground-state energy $E_1 = -13.6\ \text{eV}$ (compare
-Chapter 1) — the wave-mechanical average over the smeared-out $1s$ cloud
+which is exactly the Bohr ground-state energy $E_1 = -13.6\ \text{eV}$ — the
+measured ionization energy of hydrogen, and the value the old Bohr model
+assigned to the lowest orbit (the hydrogen atom is solved properly in
+Chapter 9). The wave-mechanical average over the smeared-out $1s$ cloud
 reproduces the old quantized orbit energy.
 
 > **Bonus observation: the virial theorem.** Note
@@ -1588,7 +1590,11 @@ The double sum is the point: besides the diagonal terms $|a_n|^2|\psi_n|^2$
 $a_n a_m^\ast \psi_n\psi_m^\ast$ with $n \neq m$ — the **interference terms**.
 Amplitudes superpose first, and only then is the modulus squared taken; that
 ordering is the entire difference between quantum superposition and classical
-probability mixing (recall the double-slit logic of Chapter 1).
+probability mixing. (Chapter 1's opening observation that light added to
+light can produce *darkness* is this same amplitude arithmetic; and the
+neutron interferometer of §3.27 reads such a cross term out directly — its
+$I_0 \sim 1 + \cos\chi$ is nothing but the interference term between the two
+path amplitudes.)
 
 This physical fact corresponds to the mathematical fact that every possible
 wavefunction $\psi$ can be expanded in an orthogonal complete function system
