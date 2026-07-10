@@ -145,8 +145,8 @@ and Boltzmann's machinery. Those papers are the toolkit this one runs on.
 ## Notation dictionary
 
 Einstein's notation predates the modern conventions; nothing here is hard,
-but a translation table saves constant friction. **Planck's constant $h$
-never appears in the paper** — Einstein works with the empirical constants
+but a translation table saves constant friction. Planck's constant $h$
+**never appears in the paper** — Einstein works with the empirical constants
 $\alpha$ and β from the radiation law and with the gas constants $R$ and $N$.
 
 | Symbol in the paper | Modern equivalent | Meaning |
@@ -389,7 +389,7 @@ theory — so why pause to praise Planck's determination of the constants? The
 answer: Einstein is about to lean, throughout the rest of the paper, on the
 numerical value of $R/N$ (i.e., on Avogadro's number). Planck's value of $N$
 came out of his radiation-law fit, whose theoretical derivation Einstein
-distrusts. So Einstein shows that **the determination of $N$ is independent
+distrusts. So Einstein shows that **the determination of Avogadro's number is independent
 of the questionable parts of Planck's theory**: it only uses the radiation
 law in the regime where the classical result (1.3) is empirically correct.
 The German title says *Elementarquanta* — the AJP translation renders it
@@ -509,6 +509,119 @@ take: one can constrain $\varphi$ by demanding that adiabatic compression of
 radiation between reflecting walls leave the entropy unchanged. He skips it
 and goes straight at the version that uses the measured black-body law —
 characteristic of the paper's data-first strategy.
+
+### Why the entropy has the form (3.1)
+
+The ansatz looks innocuous — "entropy is the integral of an entropy density"
+— but it quietly asserts four separate physical claims, and each one is
+doing real work later in the paper. Worth peeling apart, because (3.1) is
+the *only* structural input to §§3–4; everything else is the measured
+spectrum.
+
+**Claim 1 — entropy adds over frequency slices.** Entropy is additive over
+subsystems that cannot exchange heat or work with each other (the same fact,
+run through Boltzmann's principle in §5, is why probabilities multiply while
+entropies add). Are frequency slices really non-exchanging subsystems? In
+vacuum, yes: Maxwell's equations are **linear**, so waves of different
+frequencies superpose and pass through each other without trading a joule —
+red light never "heats" blue light. There is also a nice operational way to
+see that additivity is *forced*, not just plausible: colors can be sorted
+**reversibly and for free** (a prism, or in modern terms a set of dichroic
+mirrors, steers each band into its own sub-cavity, and running the optics
+backwards recombines them). Sorting is thus a reversible process involving
+no heat and no work — Einstein's exact phrase — so it cannot change the
+total entropy. But after sorting, the total entropy is manifestly the sum of
+the sub-cavities' entropies. Hence the unsorted radiation's entropy must
+have been that sum all along:
+
+$$
+S = \sum_{\text{slices}} S_\nu \quad\longrightarrow\quad V\int_0^\infty \varphi d\nu.
+$$
+
+(If entropy were *not* additive over colors, a prism plus the second law
+would make a perpetual-motion machine.) Note what would break this:
+interactions that mix frequencies. Matter does exactly that — absorb red,
+re-emit blue — which is why a carbon speck lets the spectrum *equilibrate*
+at all; remove the speck, and each slice's energy is separately locked in.
+
+**Claim 2 — each slice's entropy is proportional to the volume.** This is
+extensivity in volume: disordered radiation is spatially homogeneous (no
+preferred location), so mentally slicing the cavity into two halves gives
+two subsystems with half the energy each — and, provided correlations
+between the halves are negligible, half the entropy each. "Negligible
+correlations" is the fine print: it holds for thermal radiation, whose
+coherence length is on the order of the wavelength, tiny compared with the
+cavity. A subtlety worth heading off now, because §4 *seems* to violate
+this: the result (4.5) says $S$ grows like $\ln V$, not like $V$! No
+contradiction — extensivity means scaling energy *and* volume together,
+$S(kE, kV) = k S(E,V)$, and the form (3.1) passes that test automatically:
+scale $E$ and $V$ by the same $k$ and the density $\rho = E/(V d\nu)$ is
+unchanged, while the prefactor $V$ delivers the factor $k$. What §4 does is
+different: it holds $E$ *fixed* and grows $V$ alone, diluting the radiation.
+The $\ln V$ lives inside $\varphi$'s dependence on $\rho$, riding on top of
+the extensive prefactor. Same distinction for an ideal gas: $S$ is extensive,
+*and* isothermal expansion at fixed particle number gains $n k_B \ln(V/V_0)$.
+
+**Claim 3 — one number per frequency is enough.** This is
+Einstein's footnoted "arbitrary assumption" in sharper form: the observable
+state of the radiation is taken to be exhausted by one number per frequency.
+What's being ignored — polarization, propagation direction, phase
+relationships — is exactly what carries no information in **maximally
+disordered** radiation (the state his §1 footnote took pains to define):
+unpolarized, isotropic, random-phased. For such radiation the mean energy
+per frequency really is the only knob, so entropy can only be a function of
+it. The assumption would *fail* for structured light — a polarized beam, a
+laser-like phase-coherent state — whose entropy is lower than $\varphi(\rho,\nu)$
+predicts. Einstein's caveat is not false modesty; it marks a real boundary
+of the formula.
+
+**Claim 4 — no cross-frequency terms, no frequency derivatives.** A corollary of Claim 1's independence — slice $\nu_1$'s
+entropy cannot know what slice $\nu_2$ contains — but worth stating because
+it is what made the variational problem in the refresher above *algebraic*:
+the bins don't talk, so the Euler–Lagrange equation has no derivative term
+and stationarity is decided bin by bin.
+
+Why does $\nu$ appear explicitly at all, alongside $\rho$? Because the
+slices are not identical subsystems: a joule parked at high frequency is
+entropically different from a joule at low frequency. The deep reason is
+invisible from 1905 but beautiful with hindsight — see the aside below.
+
+**With modern eyes: the mode count hiding inside the entropy density.** Greiner's
+ch. 2 §2.3 counts $8\pi\nu^2/c^3$ electromagnetic modes per unit volume per
+unit frequency. In modern statistical mechanics the entropy of the slice is
+(number of modes) × (entropy per mode), where the per-mode entropy depends
+only on the mean occupation $\bar n$ — the average number of photons in one
+mode. Since the slice's energy is (modes) × $\bar n$ × (photon energy),
+$\rho = (8\pi\nu^2/c^3) \bar n h\nu = \alpha\nu^3 \bar n$, the occupation
+is $\bar n = \rho/\alpha\nu^3$ — precisely the combination that appears
+inside Einstein's logarithms! And the match is quantitative. The exact
+per-mode entropy of thermal light is
+$s = k_B[(1+\bar n)\ln(1+\bar n) - \bar n\ln\bar n]$; in the dilute limit
+$\bar n \ll 1$ this collapses to $s \approx k_B \bar n(1 - \ln\bar n)$, and
+multiplying by the mode density gives
+
+$$
+\varphi = \frac{8\pi\nu^2}{c^3} k_B \bar n\left(1 - \ln\bar n\right)
+= \frac{k_B \rho}{h\nu}\left(1 - \ln\frac{\rho}{\alpha\nu^3}\right),
+\qquad (3.1a)
+$$
+
+which — using $k_B/h = 1/\beta$ — is *identical* to Einstein's Wien-regime
+result (4.3). So the mysterious explicit $\nu$-dependence of $\varphi$ is
+the mode count: the same energy at higher frequency is spread over more
+modes but in bigger lumps, and the entropy knows both facts. Einstein had
+none of this scaffolding — no modes, no $\bar n$, no per-mode entropy — and
+recovered the exact dilute limit of it from thermodynamics plus the measured
+spectrum alone. (The full expression for $s$, with its $(1+\bar n)$ term,
+is what §4's caveat about non-Wien radiation was gesturing at: the extra
+term is the wave/bunching contribution, negligible when $\bar n \ll 1$.)
+
+**What each claim buys later.** Claim 1 makes the maximum-entropy problem
+separable (the two-bin argument); Claim 2 plants the $V$ that becomes
+$\ln(V/V_0)$ in (4.5); Claim 3 guarantees the black-body law can be *encoded
+in* $\varphi$ (one number per frequency in, one number out); Claim 4 makes
+the equilibrium condition algebraic. Kick out any one of them and the paper
+stalls on page one of §3.
 
 **Equilibrium as maximum entropy.** Black-body radiation is the equilibrium
 state, i.e. the $\rho(\nu)$ that maximizes $S$ at fixed total energy
@@ -964,7 +1077,7 @@ $$
 **The conclusion, in Einstein's own careful wording** (close paraphrase):
 monochromatic radiation of low density (within the domain of validity of
 Wien's law) **behaves thermodynamically as if it consisted of mutually
-independent energy quanta of magnitude $(R/N)\beta\nu$**. With the notation
+independent energy quanta** of magnitude $(R/N)\beta\nu$. With the notation
 dictionary: $(R/N)\beta\nu = k_B\cdot(h/k_B)\cdot\nu = h\nu$. There it is —
 $E = h\nu$ for free radiation, derived from the measured spectrum plus
 statistics, with no model of matter and no use of Planck's resonator
@@ -1324,8 +1437,8 @@ $1.06\times 10^{-18}$ J $\approx 6.6$ eV). Then the cross-check against an
 entirely independent route: ionisation potentials of rarefied gases measured
 electrically. Citing Stark, the smallest observed ionisation potential for
 air (at platinum anodes) is about 10 V — per gram-equivalent that is
-$9.6\times 10^{12}$ erg (10 V × the Faraday charge), **another upper limit
-for $J$, "nearly equal to the value found above."** Two independent upper
+$9.6\times 10^{12}$ erg (10 V × the Faraday charge), **another upper limit** for
+$J$, "nearly equal to the value found above." Two independent upper
 bounds landing within 50% of each other: the hypothesis survives a
 quantitative ambush it could easily have failed. (A footnote adds the odd
 detail that in the interior of gases the ionisation potential for negative
