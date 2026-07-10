@@ -27,6 +27,9 @@ text/
     ├── source/
     ├── figures/
     └── notes.md
+papers/
+└── slug/               # section-by-section notes on an original paper,
+    └── notes.md        # e.g. einstein-1905-photoelectric
 ```
 
 - **One folder per chapter** under `text/`, named `chNN-slug` (zero-padded
@@ -49,6 +52,15 @@ PDF if a polished build is ever wanted.
 | [1](text/ch01-quantization-of-physical-quantities/notes.md) | The Quantization of Physical Quantities | Notes complete (pp. 1–11), figures included |
 | [2](text/ch02-radiation-laws/notes.md) | Radiation Laws (*Strahlungsgesetze*) | Notes complete (pp. 12–36); figures pending |
 | [3](text/ch03-wave-aspect-of-matter/notes.md) | The Wave Aspect of Matter (*Der Wellenaspekt der Materie*) | Notes complete (pp. 37–83), figures included |
+
+## Papers
+
+Side quests: original papers dissected section by section, as companions to
+the chapters.
+
+| Paper | Related chapters | Status |
+|-------|------------------|--------|
+| [Einstein (1905) — On a Heuristic Point of View about the Creation and Conversion of Light](papers/einstein-1905-photoelectric/notes.md) | Ch. 1 (light quanta), Ch. 2 (radiation laws) | Notes complete, all nine sections + intro |
 
 ## Working with Claude
 
