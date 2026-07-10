@@ -528,6 +528,165 @@ moving energy from 2 to 1 would raise total entropy — not yet equilibrium.
 Equilibrium means the "entropy price of energy" is uniform. This is the same
 logic that makes temperature uniform between touching bodies.)
 
+Einstein dispatches all of this in about three lines — his 1905 readers had
+variational calculus drilled into them as the backbone of mechanics. If your
+own mechanics course is a distant memory, the next subsection rebuilds the
+machinery from scratch; if (3.2) already looks obvious, skip ahead to
+"Identifying the constant."
+
+### Refresher: variational calculus and the Lagrange multiplier, from scratch
+
+**What kind of problem this is.** Ordinary calculus finds the maximum of a
+function of finitely many variables. Here the unknown is an entire
+*function*: the spectrum $\rho(\nu)$. Correspondingly, $S$ in (3.1) is a
+**functional** — a machine that eats a whole function $\rho(\nu)$ and
+returns one number. The most useful mental model: chop the frequency axis
+into $M$ narrow bins of width $\Delta\nu$ centered at $\nu_1, \nu_2, \ldots$
+Then the function $\rho(\nu)$ is just a long list of numbers
+$\rho_1, \rho_2, \ldots, \rho_M$ (the energy density in each bin), and
+
+$$
+S \approx V \Delta\nu \sum_{i=1}^{M} \varphi(\rho_i, \nu_i)
+$$
+
+is an ordinary function of $M$ variables. Everything below is plain
+multivariable calculus on this list, with $M \to \infty$ silently at the
+end. Nothing about the $\delta$ symbol is deeper than that.
+
+**What δ means.** A **variation** $\delta\rho(\nu)$ is a small, arbitrary
+nudge function: replace $\rho(\nu)$ by $\rho(\nu) + \delta\rho(\nu)$
+everywhere and expand to first order, exactly as you would write
+$f(x + dx) \approx f(x) + f'(x) dx$:
+
+$$
+\delta S = S[\rho + \delta\rho] - S[\rho]
+= V\int_0^\infty \frac{\partial\varphi}{\partial\rho} \delta\rho(\nu) d\nu
+\quad + \quad \text{terms of order } (\delta\rho)^2. \qquad (3.2a)
+$$
+
+In the bin picture this is nothing but the multivariable chain rule,
+$df = \sum_i (\partial f/\partial\rho_i) d\rho_i$, with the sum becoming an
+integral. A function $\rho(\nu)$ is a **stationary point** (candidate
+maximum) when $\delta S = 0$ for *every* admissible nudge — just as an
+ordinary maximum has $df = 0$ for every direction $d\vec x$.
+
+**Relation to the mechanics you saw.** In mechanics one demands
+$\delta\int L(q, \dot q, t) dt = 0$ over paths $q(t)$. Because $L$ depends
+on the *derivative* $\dot q$ as well, you must integrate by parts, and out
+comes a differential equation — Euler–Lagrange,
+$\frac{d}{dt}\frac{\partial L}{\partial\dot q} - \frac{\partial L}{\partial q} = 0$.
+Einstein's problem has the same shape with $\nu$ playing the role of $t$ and
+$\rho(\nu)$ the role of the path — but $\varphi(\rho, \nu)$ contains **no
+derivative** $d\rho/d\nu$. So the integration-by-parts step never happens,
+the Euler–Lagrange equation loses its derivative term, and the stationarity
+condition is *algebraic*, bin by bin. This problem is strictly easier than
+the ones from your mechanics class: the bins don't talk to each other.
+
+**Why unconstrained maximization would be nonsense.** If every nudge were
+allowed, $\delta S = 0$ for all $\delta\rho$ would force
+$\partial\varphi/\partial\rho = 0$ at every $\nu$. (This step is the
+**fundamental lemma** of the calculus of variations: if
+$\int u(\nu) \delta\rho(\nu) d\nu = 0$ for *arbitrary* $\delta\rho$, then
+$u \equiv 0$ — because otherwise you could choose $\delta\rho$ to be a
+little bump sitting where $u \ne 0$, with the same sign as $u$, making the
+integral positive.) But physically $\partial\varphi/\partial\rho = 0$ is
+absurd: that derivative will turn out to be $1/T > 0$ — radiation entropy
+*always* increases when you add energy, so an unconstrained maximum doesn't
+exist. The maximization only makes sense **at fixed total energy**: the
+cavity has a definite energy budget, and equilibrium is the entropy maximum
+*on that budget*.
+
+**How the constraint changes the game.** Fixed energy
+$E = V\int\rho d\nu$ means the admissible nudges are only those that
+*redistribute* energy, not create it:
+
+$$
+\int_0^\infty \delta\rho(\nu) d\nu = 0. \qquad (3.2b)
+$$
+
+Now the fundamental lemma doesn't apply — $\delta\rho$ is no longer
+arbitrary — and you cannot conclude $\partial\varphi/\partial\rho = 0$.
+Good: you shouldn't.
+
+**The two-bin argument (the multiplier without the multiplier).** Here is
+the cleanest way to see what stationarity under (3.2b) *does* imply. Choose
+the simplest balanced nudge: take a sliver of energy $\varepsilon$ out of
+the bin at $\nu_2$ and put it into the bin at $\nu_1$. This satisfies
+(3.2b) by construction, and (3.2a) gives
+
+$$
+\delta S = V\varepsilon\left[
+\frac{\partial\varphi}{\partial\rho}(\nu_1) -
+\frac{\partial\varphi}{\partial\rho}(\nu_2)
+\right].
+$$
+
+At a maximum this must vanish — if it were positive, the nudge would raise
+the entropy; if negative, the *reverse* nudge would. Since $\nu_1$ and
+$\nu_2$ were arbitrary, $\partial\varphi/\partial\rho$ must have the **same
+value in every bin**. Call that common value $\lambda$. That is precisely
+conclusion (3.2), and notice it is the "entropy price of energy is uniform"
+intuition from above, now made rigorous: the derivative
+$\partial\varphi/\partial\rho$ *is* the entropy gained per unit of energy
+parked at frequency $\nu$, and equilibrium is the state where no
+reallocation of the budget is profitable.
+
+**The Lagrange multiplier is bookkeeping for the same idea.** Lagrange's
+trick automates the two-bin argument. Instead of maximizing $S$ subject to
+the constraint, make the *unconstrained* combination
+$\int(\varphi - \lambda\rho) d\nu$ stationary, where $\lambda$ is a number
+to be chosen later:
+
+$$
+\delta\int_0^\infty(\varphi - \lambda\rho) d\nu
+= \int_0^\infty\left(\frac{\partial\varphi}{\partial\rho} - \lambda\right)\delta\rho d\nu = 0.
+$$
+
+Why is this legitimate? For nudges obeying (3.2b), the added term
+$-\lambda\int\delta\rho d\nu$ is zero anyway — subtracting it changes
+nothing. Its purpose is to *extend* the statement to unbalanced nudges:
+$\lambda$ is tuned so that the bracket kills the one direction (uniformly
+adding energy) that the constraint had removed. With the combination
+stationary under **arbitrary** $\delta\rho$, the fundamental lemma applies
+again and yields $\partial\varphi/\partial\rho = \lambda$ at every $\nu$ —
+equation (3.2). Afterwards $\lambda$ is pinned down by requiring the
+constraint itself, $\int\rho d\nu = E/V$.
+
+If you prefer the finite-dimensional picture from multivariable calculus:
+to maximize $f(\vec x)$ on the level surface $g(\vec x) = c$, note that at
+the constrained maximum you cannot increase $f$ by moving *along* the
+surface, so the gradient of $f$ must be perpendicular to the surface — i.e.
+parallel to the gradient of $g$: the condition
+$\partial f/\partial x_i = \lambda \partial g/\partial x_i$ for all $i$.
+Here $f \leftrightarrow S$ with $\partial f/\partial\rho_i = \varphi'(\rho_i)$,
+and $g \leftrightarrow E$ whose "gradient" components $\partial g/\partial\rho_i$
+are all equal to 1 — so parallel-gradients reads $\varphi'(\rho_i) = \lambda$
+in every bin.
+
+**The multiplier is never junk — it is the physics.** In mechanics, when
+you enforce a constraint with a multiplier, the multiplier turns out to be
+the constraint *force* (the tension in the pendulum rod). The same thing
+happens here: $\lambda$, the sensitivity of the maximized entropy to the
+constrained quantity, is $\partial S/\partial E$ — and thermodynamics calls
+that quantity $1/T$, as the next paragraph confirms. This is a completely
+general pattern worth taking from this paper into the rest of statistical
+mechanics: **the multiplier attached to each conserved quantity is its
+conjugate intensive variable**. Constrain energy and the multiplier is
+$1/T$; constrain particle number and it is $-\mu/T$ (the chemical
+potential); constrain volume and it is $p/T$. The Boltzmann distribution,
+and the Bose–Einstein occupation $1/(e^x - 1)$ that Greiner uses to rebuild
+Planck's law in ch. 2 §2.6, all come out of exactly this
+maximize-entropy-with-multipliers machine.
+
+**Is it a maximum, though?** Stationarity is also satisfied by minima and
+saddle points. The second-order check is concavity of $\varphi$ in $\rho$,
+and (4.3) will let you verify it in the Wien regime:
+$\partial^2\varphi/\partial\rho^2 = -1/(\beta\nu\rho) < 0$. Each bin's
+entropy has diminishing returns in energy — which is also *why* the
+"uniform price" condition picks out a maximum: with concave $\varphi$,
+moving energy from a low-price bin to a high-price bin is always favorable
+until the prices equalize.
+
 **Identifying the constant with 1/T.** Add heat $dE$ reversibly to black-body
 radiation at fixed volume. Thermodynamics says $dS = dE/T$. Computing $dS$
 from (3.1) slice by slice and using the fact that $\partial\varphi/\partial\rho$
