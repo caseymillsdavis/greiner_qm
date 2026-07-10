@@ -3,8 +3,12 @@
 > Source: A. Einstein, *Annalen der Physik* **17**, 132–148 (1905). Received
 > 18 March 1905. German title: *Über einen die Erzeugung und Verwandlung des
 > Lichtes betreffenden heuristischen Gesichtspunkt*.
-> English text followed here: the
-> [Wikisource translation](https://en.wikisource.org/wiki/Translation:On_a_Heuristic_Point_of_View_about_the_Creation_and_Conversion_of_Light).
+> English text followed here: the Arons–Peppard translation, *Am. J. Phys.*
+> **33**, 367 (1965) — "Concerning an Heuristic Point of View Toward the
+> Emission and Transformation of Light" — a copy of which is kept in
+> [`source/`](source/). The
+> [Wikisource translation](https://en.wikisource.org/wiki/Translation:On_a_Heuristic_Point_of_View_about_the_Creation_and_Conversion_of_Light)
+> is a freely readable alternative with slightly different wording.
 > Companion reading for Greiner ch. 1
 > ([notes](../../text/ch01-quantization-of-physical-quantities/notes.md), §1.1
 > on the photoelectric effect) and ch. 2
@@ -68,9 +72,10 @@ he described that way, and it was the last major claim of his to be accepted
 (essentially not until the Compton effect, 1923).
 
 **Title translation note.** You will see the title rendered variously:
-"creation and conversion of light" (Wikisource), "production and
-transformation of light" (Arons–Peppard, ter Haar). Same German words
-(*Erzeugung und Verwandlung*). The choice of words matters for reading the
+"emission and transformation of light" (Arons–Peppard — the AJP translation
+in `source/`), "creation and conversion of light" (Wikisource), "production
+and transformation of light" (ter Haar). Same German words (*Erzeugung und
+Verwandlung*). The choice of words matters for reading the
 paper: Einstein's hypothesis is explicitly about how light is **emitted,
 absorbed, and transformed** — not, or at least not necessarily, about how it
 propagates. Keep that in mind; it is stated carefully in the introduction and
@@ -159,16 +164,26 @@ $\alpha$ and β from the radiation law and with the gas constants $R$ and $N$.
 | $W$ | $W$ | "probability" of a state in Boltzmann's principle (a relative statistical weight) |
 | $\Pi$ | $V_s$ | stopping potential in the photoelectric section |
 | $\varepsilon$ | $e$ | elementary charge |
-| $P$, $P'$ | $W_0$ | escape work, today called the work function |
+| $P$, $P'$ | $W_0$ | escape work, today called the work function; $P$ is per electron, and $P'$ is the same quantity per gram-equivalent of electrons, expressed as a potential |
 
 Keep the one identity $(R/N)\beta\nu = h\nu$ in your pocket; it converts every
 formula in the paper to its textbook form instantly.
+
+Three further trip-hazards of the paper's notation:
+
+- Volumes are written lowercase, $v$ and $v_0$; these notes use $V$ and $V_0$.
+- The bar in §1's average energy refers to **one linear component** of a
+  three-dimensional oscillator (Einstein resolves the bound electron's motion
+  into three perpendicular components and works per component).
+- In §8 the letter $E$ gets reused for the **charge of a gram-equivalent of
+  monovalent ions** — the Faraday constant, quoted as $9.6\times 10^3$ in the
+  paper's electromagnetic units — not for an energy. Watch for it.
 
 ---
 
 ## The Introduction — the manifesto
 
-<!-- source: https://en.wikisource.org/wiki/Translation:On_a_Heuristic_Point_of_View_about_the_Creation_and_Conversion_of_Light -->
+<!-- source: source/einstein1905-arons-peppard-ajp33.pdf, pp. 1-2 -->
 
 **What he is doing.** In four paragraphs Einstein states the deepest version
 of the problem, carves out exactly the territory where the wave theory can be
@@ -206,9 +221,9 @@ governed by something entirely different. This is why the title says
 spreads from a point source, its energy is *not* distributed continuously
 over ever-growing volumes; it consists of a **finite number of energy quanta,
 localised at points of space, which move without dividing and can only be
-absorbed or generated as complete units.** Note the three separate claims
+produced and absorbed as complete units.** Note the three separate claims
 packed in: (i) spatial localisation, (ii) indivisibility in flight, (iii)
-all-or-nothing absorption and emission. The thermodynamic argument of §§3–6
+all-or-nothing production and absorption. The thermodynamic argument of §§3–6
 will support the "as if" version of (i)–(ii) for dilute radiation; the
 applications in §§7–9 test (iii).
 
@@ -247,7 +262,7 @@ processes where a single molecule or electron does business with the field.
 
 ---
 
-## §1. On a difficulty encountered in the theory of "black-body radiation"
+## §1. Concerning a Difficulty with Regard to the Theory of Blackbody Radiation
 
 **What he is doing.** Before proposing anything new, Einstein demonstrates
 that *orthodox* physics — Maxwell's electrodynamics plus the kinetic theory
@@ -266,20 +281,33 @@ simultaneously. That double bookkeeping is the trap.
 
 **Step 1 — mechanics fixes the resonator's average energy.** Kinetic theory's
 equipartition theorem: at temperature $T$, thermal agitation gives each
-quadratic degree of freedom the average energy $\frac{1}{2}(R/N)T$. A
-one-dimensional oscillator has two such terms (kinetic + potential), so its
-mean energy is
+quadratic degree of freedom the average energy $\frac{1}{2}(R/N)T$. Einstein
+resolves the bound electron's motion into three perpendicular linear
+components and works per component; one component has two such terms
+(kinetic + potential, equal on time average), so its mean energy is
 
 $$
 \bar E = \frac{R}{N} T. \qquad (1.1)
 $$
 
 Here $R/N$ — gas constant divided by Avogadro's number — is the "per
-molecule" unit of thermal energy, our $k_B$. The crucial feature of (1.1):
-it is **independent of the frequency** $\nu$. Equipartition is
-temperature-blind to how stiff the spring is; a slow floppy oscillator and a
-fast stiff one soak up the same average energy. Hold that thought — it is
-the exact point where classical physics dies.
+molecule" unit of thermal energy, our $k_B$. Einstein glosses (1.1) as
+"two-thirds the kinetic energy of a free monatomic gas particle" — check:
+a free particle carries $\frac{3}{2}(R/N)T$ of kinetic energy, and
+two-thirds of that is $(R/N)T$. His argument that (1.1) *must* hold in
+equilibrium is a driftwood argument: if radiation somehow held the
+oscillators above or below $\bar E$ on average, collisions with the gas
+would systematically pump heat into or out of the gas, and the gas
+temperature would drift — contradiction with equilibrium. (A footnote
+remarks that the underlying assumption — free electrons and molecules have
+equal mean kinetic energy — is the same one Drude used to explain the ratio
+of thermal to electrical conductivity of metals; Einstein is flagging that
+it has independent experimental credit.)
+
+The crucial feature of (1.1): it is **independent of the frequency** $\nu$.
+Equipartition is temperature-blind to how stiff the spring is; a slow floppy
+oscillator and a fast stiff one soak up the same average energy. Hold that
+thought — it is the exact point where classical physics dies.
 
 **Step 2 — electrodynamics ties the resonator to the field.** Planck had
 shown (1900, by an entirely classical calculation of a small damped
@@ -342,10 +370,18 @@ between matter and radiation is impossible in classical physics.
   the classical law holds *exactly there* is the pivot of §2. The ch. 2 notes
   develop this "price-to-budget ratio" intuition at length (the variable
   $x = \hbar\omega/k_B T$).
+- *The long footnote on "random" radiation:* under (1.2) Einstein appends a
+  footnote spelling out what "the radiation is a completely random process"
+  means — expand the field at a point in Fourier components; the radiation is
+  "as disordered as conceivable" when the amplitudes and phases of different
+  components are statistically independent. It reads like a throwaway, but
+  notice what it is: Einstein worrying, already, about how to define
+  *disorder in a continuous field* — the exact concern that matures into his
+  1909 fluctuation analysis of radiation.
 
 ---
 
-## §2. On Planck's determination of the elementary quanta
+## §2. Concerning Planck's Determination of the Fundamental Constants
 
 **What he is doing.** This section looks like a digression and confuses many
 readers: Einstein is about to *reject* the general validity of the classical
@@ -356,10 +392,12 @@ came out of his radiation-law fit, whose theoretical derivation Einstein
 distrusts. So Einstein shows that **the determination of $N$ is independent
 of the questionable parts of Planck's theory**: it only uses the radiation
 law in the regime where the classical result (1.3) is empirically correct.
-The section title's "elementary quanta" means the *atomistic constants* —
-the mass of the hydrogen atom, equivalently $N$, and with it the elementary
-charge — **not** light quanta. (A translation-era trap: *Elementarquanta*
-was standard for "elementary units of matter/charge.")
+The German title says *Elementarquanta* — the AJP translation renders it
+"fundamental constants," Wikisource "elementary quanta." Either way it means
+the *atomistic constants* — the mass of the hydrogen atom, equivalently $N$,
+and with it the elementary charge — **not** light quanta. (A translation-era
+trap for readers of the Wikisource wording: *Elementarquanta* was standard
+for "elementary units of matter/charge.")
 
 **The argument.** Planck's law, as an empirical fit to the black-body data:
 
@@ -367,8 +405,15 @@ $$
 \rho_\nu = \frac{\alpha\nu^3}{e^{\beta\nu/T} - 1}, \qquad (2.1)
 $$
 
-with fitted constants $\alpha$ and β (Einstein quotes β = 4.866e-11 in CGS
-units; in modern terms $\alpha = 8\pi h/L^3$ and β $= h/k_B$). For
+with fitted constants quoted as $\alpha = 6.10\times 10^{-56}$ and
+β $= 4.866\times 10^{-11}$ in CGS units; in modern terms
+$\alpha = 8\pi h/L^3$ and β $= h/k_B$. (A heads-up if you recompute: the
+printed exponent of $\alpha$ is a slip. Modern $8\pi h/c^3$ is
+$6.2\times 10^{-57}$, and plugging the *printed* $\alpha$ into (2.3) below
+gives $6.17\times 10^{22}$ — ten times smaller than the $N$ Einstein
+correctly states. With $\alpha = 6.10\times 10^{-57}$ everything is
+consistent. Even this paper has a typo; don't let it cost you an evening.)
+For
 $T/\nu$ large — high temperature or low frequency — expand the exponential,
 $e^{\beta\nu/T} \approx 1 + \beta\nu/T$:
 
@@ -384,6 +429,10 @@ $$
 \quad\Longrightarrow\quad
 N = \frac{8\pi R \beta}{\alpha L^3} = 6.17\times 10^{23}. \qquad (2.3)
 $$
+
+Einstein cashes this out concretely: a hydrogen atom then weighs $1/N$ grams
+$= 1.62\times 10^{-24}$ g — "exactly the value found by Herr Planck, which in
+turn agrees with values found by other methods."
 
 Two comments Einstein draws out explicitly:
 
@@ -405,6 +454,13 @@ quantities. In particular the energy quantum $(R/N)\beta\nu$ that emerges in
 §6 will be a number you can compute, not a free parameter — which is what
 gives §§7–9 their quantitative teeth.
 
+The section closes with a methodological declaration worth underlining as
+you read: "In the following we shall consider the experimental facts
+concerning blackbody radiation **without invoking a model for the emission
+and propagation of the radiation itself**." That is the contract for §§3–6 —
+no resonators, no Maxwell, no mechanism; only the measured spectrum plus
+thermodynamics.
+
 **With modern eyes.** Einstein's $N = 6.17\times 10^{23}$ is within 2.5% of
 the modern $6.022\times 10^{23}$ — remarkable for 1905, and one more entry in
 Einstein's lifelong hobby of extracting Avogadro's number from unlikely
@@ -417,7 +473,7 @@ correspondence principle in embryo.
 
 ---
 
-## §3. On the entropy of the radiation
+## §3. Concerning the Entropy of Radiation
 
 **What he is doing.** Here begins the engine (§§3–6). The goal of this
 section is a tool: given the measured spectrum, construct the **entropy** of
@@ -444,7 +500,15 @@ S = V\int_0^\infty \varphi(\rho,\nu) d\nu, \qquad (3.1)
 $$
 
 where $\varphi$ is an unknown entropy density function. The whole game is to
-determine $\varphi$.
+determine $\varphi$. Two honest asides in the text are easy to miss. First,
+a footnote concedes that "the state is fully described by $\rho(\nu)$" is
+"an arbitrary assumption," retained as the simplest one until experiment
+objects — polarization and phase relationships are being deliberately swept
+under the rug. Second, Einstein mentions an alternative route he will *not*
+take: one can constrain $\varphi$ by demanding that adiabatic compression of
+radiation between reflecting walls leave the entropy unchanged. He skips it
+and goes straight at the version that uses the measured black-body law —
+characteristic of the paper's data-first strategy.
 
 **Equilibrium as maximum entropy.** Black-body radiation is the equilibrium
 state, i.e. the $\rho(\nu)$ that maximizes $S$ at fixed total energy
@@ -500,7 +564,7 @@ That inversion — spectrum in, entropy out — is the trick that makes §4 poss
 
 ---
 
-## §4. Limiting law for the entropy of monochromatic radiation at low radiation density
+## §4. Asymptotic Form for the Entropy of Monochromatic Radiation at Low Radiation Density
 
 **What he is doing.** Now the tool from §3 gets pointed at a deliberately
 chosen corner of the data: the **Wien regime** — high frequency, low
@@ -538,7 +602,9 @@ $$
 
 (Check by differentiating: the derivative of $-\rho[\ln(\rho/\alpha\nu^3)-1]$
 with respect to $\rho$ is $-\ln(\rho/\alpha\nu^3)$, matching (4.2). The
-integration constant is dropped — only entropy *differences* will matter.)
+integration constant is fixed by the condition Einstein states at the end of
+§3 — $\varphi$ vanishes when $\rho = 0$: no radiation, no entropy. For the
+volume comparison below only entropy *differences* matter anyway.)
 
 **Step 3 — entropy of a monochromatic blob.** Take radiation of total energy
 $E$, all within a narrow band $d\nu$ around frequency $\nu$, filling volume
@@ -584,7 +650,7 @@ your eye on that prefactor; §6 will read it as a particle count.
 
 ---
 
-## §5. Molecular-theoretical investigation of the dependency of the entropy of gases and dilute solutions on the volume
+## §5. Molecular-Theoretic Investigation of the Dependence of the Entropy of Gases and Dilute Solutions on the Volume
 
 **What he is doing.** Equation (4.5) says radiation entropy looks like gas
 entropy. To convert that resemblance into a *particle count*, Einstein needs
@@ -616,12 +682,43 @@ question. Two points he takes care over, both easy to skate past:
   ("every conceivable kinetic theory" must satisfy it, as long as states
   evolve probabilistically toward the more probable). This is exactly what
   licenses applying it to radiation, whose micro-dynamics he has pointedly
-  declined to model.
+  declined to model. He opens the section with a complaint that
+  molecular-theoretic calculations often use "probability" in a sense that
+  isn't the probability calculus's, and promises a separate paper showing
+  that his time-fraction "statistical probability" suffices and removes "a
+  logical difficulty" obstructing Boltzmann's principle. (He never published
+  that paper as such — the program resurfaces in his 1909–1910 fluctuation
+  work.)
+
+**Where the logarithm comes from.** The paper does not just posit (5.1); it
+derives the functional form on one page, and the derivation is a small gem
+worth absorbing. Take two systems that do not interact. Entropy, being
+extensive, must **add**; probabilities of independent systems must
+**multiply**:
+
+$$
+S = S_1 + S_2, \qquad W = W_1 W_2.
+$$
+
+If entropy is any function of probability, $S_i = \varphi_i(W_i)$, then
+
+$$
+\varphi(W_1 W_2) = \varphi_1(W_1) + \varphi_2(W_2), \qquad (5.1a)
+$$
+
+and the only solution is the logarithm: $\varphi(W) = C\ln W +$ const. The
+constant $C$ appears on both sides of (5.1a) for *any* pair of systems, so it
+must be one **universal** constant — measure it once, on any convenient
+system, and it is fixed for all systems forever. The kinetic theory of gases
+supplies the calibration: $C = R/N$. (Modern statement: $S = k_B\ln W$, and
+this argument is why Boltzmann's constant is universal. Planck wrote it in
+this famous form in 1900–1901; the version engraved on Boltzmann's tombstone
+came later.)
 
 **The ideal-gas computation.** Take $n$ molecules moving independently in a
 volume $V_0$ (dilute: no interactions, so one molecule's position says
 nothing about another's). What is the probability that, at a random instant,
-**all $n$ of them happen to be inside a chosen sub-volume $V$**? Each
+all $n$ of them happen to be inside a chosen sub-volume $V$? Each
 molecule is in $V$ with probability $V/V_0$; independence multiplies:
 
 $$
@@ -650,8 +747,9 @@ water, why not for energy quanta in vacuum? Mentioning solutions is not
 decoration; it is the universality claim without which §6 would be a mere pun.
 
 **Closing the loop with thermodynamics.** As a consistency check Einstein
-runs the logic forward to pressure: from $dE = T dS - p dV$ at constant
-energy (an ideal gas's energy does not depend on volume),
+runs the logic forward to pressure (in a footnote, via the free energy
+$E - TS$; equivalently): from $dE = T dS - p dV$ at constant energy (an
+ideal gas's energy does not depend on volume),
 $p = T(\partial S/\partial V)$, and (5.3) gives
 
 $$
@@ -675,7 +773,7 @@ Bose–Einstein gas.)
 
 ---
 
-## §6. Interpretation of the expression for the dependency of the entropy of monochromatic radiation on volume according to Boltzmann's Principle
+## §6. Interpretation of the Expression for the Volume Dependence of the Entropy of Monochromatic Radiation in Accordance with Boltzmann's Principle
 
 **What he is doing.** One page, one move, and the paper's central result.
 Put (4.5) and (5.1) side by side and read off what radiation must be made of.
@@ -696,7 +794,7 @@ W = \left(\frac{V}{V_0}\right)^{\frac{N E}{R\beta\nu}}. \qquad (6.2)
 $$
 
 But (5.2) says a power law of exactly this form, with exponent $n$, is the
-fingerprint of **$n$ independently moving units**. Matching exponents:
+fingerprint of $n$ **independently moving units**. Matching exponents:
 
 $$
 n = \frac{N E}{R\beta\nu}
@@ -712,6 +810,35 @@ dictionary: $(R/N)\beta\nu = k_B\cdot(h/k_B)\cdot\nu = h\nu$. There it is —
 $E = h\nu$ for free radiation, derived from the measured spectrum plus
 statistics, with no model of matter and no use of Planck's resonator
 bookkeeping.
+
+**A closing back-of-envelope.** Before moving on, Einstein sizes his new
+objects: how big is the *average* quantum of black-body radiation, compared
+with the mean translational kinetic energy $\frac{3}{2}(R/N)T$ of a gas
+molecule at the same temperature? Average quantum = total energy over total
+number of quanta, both computed from Wien's law:
+
+$$
+\bar\epsilon
+= \frac{\int_0^\infty \alpha\nu^3 e^{-\beta\nu/T} d\nu}
+       {\int_0^\infty \frac{N}{R\beta\nu} \alpha\nu^3 e^{-\beta\nu/T} d\nu}
+= 3\frac{R}{N}T. \qquad (6.4)
+$$
+
+(The numerator's integrand is energy per frequency slice; dividing each
+slice's energy by the quantum size $R\beta\nu/N$ turns it into a *count*.
+With $a = \beta/T$: the numerator integral is $6\alpha/a^4$ and the
+denominator's is $(N/R\beta)\cdot 2\alpha/a^3$, and the ratio collapses to
+$3R T/N$.) So a typical thermal light quantum carries $3k_B T$ — the same
+scale as, and exactly twice, a gas molecule's $\frac{3}{2}k_B T$. The point
+of the exercise: the quanta are **thermally sized** objects, respectable
+citizens of the same statistical world as molecules — reinforcing the gas
+analogy that the whole section rests on. (Hidden bonus: maximizing Wien's
+$\nu^3 e^{-\beta\nu/T}$ gives $\beta\nu/T = 3$, i.e. the spectrum peaks at
+$h\nu = 3k_B T$ — equation (6.4) is Wien's displacement law wearing a
+statistical costume. Greiner derives the displacement law from the full
+Planck law in ch. 2 §2.7, where the peak condition becomes the famous
+transcendental equation with root $x \approx 2.82$; in the Wien
+approximation the root is exactly 3.)
 
 And then the bridge sentence that launches the rest of the paper: if dilute
 radiation *sits there* (thermodynamically) like a gas of independent energy
@@ -730,9 +857,9 @@ thermodynamics; it needs experiments. Hence §§7–9.
   a size or phase, or how two of them interfere. Einstein's honesty about
   this boundary — thermodynamic behavior proven, elementary processes
   conjectured — is the paper's methodological spine.
-- *Why energy proportional to frequency?* Track the derivation: the exponent $\beta\nu$
-  appearing of Wien's law (4.1) becomes the $1/\beta\nu$ prefactor of
-  the entropy (4.5) becomes the quantum $\beta\nu\cdot R/N$ in (6.3). The
+- *Why energy proportional to frequency?* Track the derivation: the exponent
+  $\beta\nu$ in Wien's law (4.1) becomes the $1/\beta\nu$ prefactor of the
+  entropy (4.5), which becomes the quantum $\beta\nu\cdot R/N$ in (6.3). The
   Planck relation E-proportional-to-ν is a direct transcription of the
   *shape of the measured spectrum* — of the fact that the high-frequency
   tail falls exponentially in $\nu/T$. No spectrum-shaped input, no $h\nu$.
@@ -743,7 +870,7 @@ thermodynamics; it needs experiments. Hence §§7–9.
   Bose (1924) and Einstein's extension to matter (1924–25). It is a nice
   historical loop: the 1905 argument works precisely because the Wien limit
   is where Bose statistics degenerates into Maxwell–Boltzmann independence.
-- *No $h$ anywhere.* Einstein writes the quantum as $(R/N)\beta\nu$ partly
+- *No Planck constant anywhere.* Einstein writes the quantum as $(R/N)\beta\nu$ partly
   to stay close to measured constants, partly (historians argue) to keep his
   distance from Planck's theory, whose derivation he considered unsound. The
   quantum is presented as an experimental fact about radiation, not as an
@@ -758,7 +885,7 @@ including Planck — was willing to take.
 
 ---
 
-## §7. On Stokes' rule
+## §7. Concerning Stokes's Rule
 
 **What he is doing.** First of three applications, and deliberately the
 gentlest: a qualitative rule that the quantum picture explains in two lines
@@ -804,10 +931,24 @@ single-quantum accounting fails:
    two-photon absorption and upconversion, theorized by Göppert-Mayer (1931)
    and observed by Kaiser and Garrett (1961), once lasers made "enormous"
    attainable. A 56-year-early prediction of when nonlinear optics turns on.
-2. **Material not in a "normal state"** — e.g. already thermally excited, so
-   the emitted quantum can top up from stored energy. Modern instance:
-   anti-Stokes emission and anti-Stokes Raman lines, whose intensity indeed
-   grows with temperature.
+2. **Light that is not "Wien-regime" in character** — when the incident (or
+   emitted) light "is not of such a composition that it corresponds to
+   blackbody radiation within the range of validity of Wien's Law," his
+   example being light from a body so hot that at the relevant wavelengths
+   Wien's law no longer holds. Remember what §6 actually proved: independent
+   quanta *only in the Wien limit*. Outside it, all bets are off, and
+   Einstein is disciplined enough to say so. He flags this case as
+   commanding "especial interest": a "non-Wien radiation" of very low density
+   might behave *qualitatively* differently from Wien-regime radiation — with
+   hindsight, a first squint at the regime where photon correlations (Bose
+   statistics, bunching) live.
+
+(A modern relative of case 1's bookkeeping: thermally assisted anti-Stokes
+emission, where the material tops up the emitted quantum from stored heat —
+the per-event energy ledger survives; only the "all the energy from one
+incoming quantum" clause is relaxed. Einstein's two cases are about the
+*light*; this one is about the material's state — full quantum mechanics was
+needed to sort out the material's side.)
 
 He also notes the flip side: for weak excitation the quantum picture demands
 the luminescence output be **proportional to the input intensity** with no
@@ -826,7 +967,7 @@ impressive is how much follows from bare energy bookkeeping per quantum.
 
 ---
 
-## §8. On the generation of cathode rays by illumination of solid bodies
+## §8. Concerning the Emission of Cathode Rays Through Illumination of Solid Bodies
 
 *This is the photoelectric-effect section — the one the Nobel committee cited
 — and the reason the paper is misremembered as "the photoelectric paper."
@@ -845,7 +986,8 @@ surface in vacuum ejects electrons. Lenard found:
 1. The electrons' maximum kinetic energy is **independent of the light's
    intensity** — turn the arc lamp up tenfold, the electrons come out no
    faster, there are just more of them.
-2. The energy **increases with the light's frequency**.
+2. The energy appeared to **grow with the light's frequency** (qualitatively
+   — his apparatus could not pin down the functional form).
 3. The number of electrons is proportional to intensity.
 
 Why this is impossible on the wave picture — the **accumulation problem**,
@@ -878,18 +1020,36 @@ energy — the accumulation problem simply evaporates, because the energy was
 never spread out in the first place.
 
 **The stopping-potential form.** To measure $E_{\max}$, charge the emitting
-plate to a positive potential $\Pi$ so that escaping electrons (charge
-$\varepsilon$) must climb a potential hill; emission stops when the hill
-exactly eats the maximum energy:
+plate to a positive potential $\Pi$ (surrounded by conductors at zero
+potential) so that escaping electrons, charge $\varepsilon$, must climb a
+potential hill; emission just stops when the hill exactly eats the maximum
+energy:
 
 $$
-\Pi\varepsilon = \frac{R}{N}\beta\nu - P'. \qquad (8.2)
+\Pi\varepsilon = \frac{R}{N}\beta\nu - P. \qquad (8.2)
 $$
+
+Einstein immediately rewrites it per gram-equivalent (per mole) of electrons
+— the units his electrochemically minded readers knew by heart. Multiply
+(8.2) by $N$:
+
+$$
+\Pi E = R\beta\nu - P', \qquad (8.3)
+$$
+
+where $E$ — an unfortunate reuse of the letter, here **not** an energy — is
+the charge of one gram-equivalent of monovalent ions (the Faraday constant,
+$9.6\times 10^3$ in the paper's electromagnetic units), and $P'$ is the
+escape work per gram-equivalent expressed as a potential. A footnote covers
+the case where the electron must first be torn off a neutral molecule: fine,
+fold that extra work into $P'$ as a second term — the *form* of the law is
+untouched, which is part of its power.
 
 **Einstein's numerical sanity check.** Put in $\nu = 1.03\times 10^{15}$ Hz
-(he takes this as the ultraviolet limit of the solar spectrum) and ignore
-$P'$: then $\Pi = (R/N)\beta\nu/\varepsilon \approx 4.3$ volts. (Check in
-modern units: $h\nu = 6.6\times 10^{-34}\times 1.03\times 10^{15} \approx
+(he takes this as the ultraviolet limit of the solar spectrum), take
+$P' = 0$, and $\beta = 4.866\times 10^{-11}$: then
+$\Pi \approx 4.3$ volts. (Check in modern units:
+$h\nu = 6.6\times 10^{-34}\times 1.03\times 10^{15} \approx
 6.8\times 10^{-19}$ J $\approx 4.3$ eV.) Lenard's measured stopping
 potentials were of exactly this order — Einstein claims agreement in order
 of magnitude, no more, because that is all the 1905 data could support.
@@ -901,6 +1061,31 @@ of magnitude, no more, because that is all the 1905 data could support.
 2. Its **slope is a universal constant, identical for every material**:
    slope $= R\beta/(N\varepsilon)$, i.e. $h/e$ in modern notation. The
    material only shifts the line up and down (through $P'$); it cannot tilt it.
+
+**Two refinements in the paper that readers often skip.** First, Einstein
+shows what survives if you drop the "simplest picture" that a quantum hands
+its *entire* energy to one electron: the equality degrades gracefully to
+
+$$
+\Pi E + P' \le R\beta\nu, \qquad (8.4)
+$$
+
+so the straight line becomes an upper envelope — which is in fact exactly how
+the modern measurement is phrased (the *fastest* electrons define the line).
+Second, he runs the process **backwards**. In cathodoluminescence — electrons
+slamming into a phosphor and producing light, the workhorse of Lenard's own
+tube experiments — the same ledger must read
+
+$$
+\Pi E + P' \ge R\beta\nu, \qquad (8.5)
+$$
+
+the electron must at least pay for each quantum it creates. Now the data:
+Lenard's substances needed electrons accelerated through hundreds or
+thousands of volts to produce visible light — quanta costing only a few
+volts each. Conclusion: a single electron generates **many** light quanta.
+No contradiction, and a quiet display of the hypothesis' reach — one
+bookkeeping rule, running in both directions.
 
 Nothing in 1905 could test the linearity or the universal slope — the
 requisite precision was heroic (contact potentials between different metals
@@ -925,11 +1110,12 @@ measurement.
   rest populate a spectrum below it. Experiments therefore look at the
   fastest electrons (the stopping potential is where the *last* electron is
   turned back).
-- *$P$ vs $P'$:* conceptually the same escape work; operationally, measured
-  stopping potentials involve the contact potential between the emitter and
-  the collector, which is why Einstein quietly uses a primed symbol in the
-  measurable relation. This subtlety consumed a good part of Millikan's
-  decade.
+- $P$ vs $P'$: not two physical quantities — $P$ is the escape work per
+  electron, $P'$ the same thing per gram-equivalent, expressed as a potential
+  via the Faraday charge ($P' = NP$ in energy terms). The genuinely nasty
+  experimental subtlety — contact potential differences between emitter and
+  collector shifting the measured $\Pi$ — is *not* in the paper; taming it is
+  what consumed a good part of Millikan's decade.
 - *What Einstein does not claim:* any mechanism for *how* the electron
   absorbs the quantum, any statement about atomic structure (Bohr's model is
   eight years away), or that light "is particles" in flight — the argument
@@ -947,7 +1133,7 @@ measurement.
 
 ---
 
-## §9. On the ionisation of gases by ultraviolet light
+## §9. Concerning the Ionization of Gases by Ultraviolet Light
 
 **What he is doing.** Third application, shortest, and pushing the same
 logic one step further — from "quantum ejects electron from metal" to
@@ -956,31 +1142,52 @@ logic one step further — from "quantum ejects electron from metal" to
 existing data, and (in embryo) the founding principle of photochemistry.
 
 **The inequality.** If ionisation happens one quantum to one molecule, then
-a quantum must carry at least the ionisation work $J$ of one molecule:
-$(R/N)\beta\nu \ge J$. Multiply by Avogadro's number to phrase it per mole
-(per "gram-equivalent," in period units): $R\beta\nu \ge NJ$. Lenard had
-found the longest wavelength that ionises air to be about 190 nm, i.e.
-$\nu = L/\lambda \approx 1.58\times 10^{15}$ Hz. So the hypothesis demands
-that the ionisation work of air obey
+a quantum must carry at least the ionisation work of one molecule. Einstein
+phrases it per gram-equivalent (per mole): with $J$ the theoretical work of
+ionisation per gram-equivalent, one mole of quanta carries energy $R\beta\nu$
+(that is, $N$ quanta of $(R/N)\beta\nu$ each), so
 
 $$
-N J \le R\beta\nu \approx 6.4\times 10^{12} \quad \text{erg per gram-equivalent}, \qquad (9.1)
+R\beta\nu \ge J. \qquad (9.1)
 $$
 
-that is, about 6.5 eV per molecule ($6.4\times 10^{12}$ erg $= 6.4\times
+Lenard had found the largest effective wavelength for ionising air to be
+about $1.9\times 10^{-5}$ cm (190 nm), i.e.
+$\nu = L/\lambda \approx 1.58\times 10^{15}$ Hz, which makes the bound
+
+$$
+J \le R\beta\nu = 6.4\times 10^{12} \quad \text{erg per gram-equivalent}, \qquad (9.2)
+$$
+
+about 6.5 eV per molecule ($6.4\times 10^{12}$ erg $= 6.4\times
 10^5$ J per mole; divide by $6\times 10^{23}$ and convert: about
-$1.06\times 10^{-18}$ J $\approx 6.6$ eV). Einstein then compares this upper
-bound with the ionisation work inferred from entirely independent
-measurements — J. Stark's electrical measurements on ionisation in gases —
-and finds no contradiction: the numbers are of the same order. The
-hypothesis survives a quantitative ambush it could easily have failed.
+$1.06\times 10^{-18}$ J $\approx 6.6$ eV). Then the cross-check against an
+entirely independent route: ionisation potentials of rarefied gases measured
+electrically. Citing Stark, the smallest observed ionisation potential for
+air (at platinum anodes) is about 10 V — per gram-equivalent that is
+$9.6\times 10^{12}$ erg (10 V × the Faraday charge), **another upper limit
+for $J$, "nearly equal to the value found above."** Two independent upper
+bounds landing within 50% of each other: the hypothesis survives a
+quantitative ambush it could easily have failed. (A footnote adds the odd
+detail that in the interior of gases the ionisation potential for negative
+ions is about five times greater — a reminder of how murky gas-discharge
+data still was.)
 
-**The photochemical yield argument.** The same picture bounds *how much*
-ionisation a given amount of light can do: each absorbed quantum ionises at
-most one molecule, so the number of ions is at most the absorbed energy
-divided by $(R/N)\beta\nu$. This one-quantum-one-molecule accounting is the
-**photochemical equivalence law**, which Einstein formalized in 1912 (now
-called the Stark–Einstein law) and which underlies all quantitative
+**The photochemical yield prediction.** Einstein then sharpens the picture
+into an equation he flags as deserving experimental test "of great
+importance": if *every* absorbed quantum ionises exactly one molecule, the
+number of gram-molecules ionised, $j$, is tied to the absorbed light energy
+$L$ by
+
+$$
+j = \frac{L}{R\beta\nu}, \qquad (9.3)
+$$
+
+valid, he specifies, only for gases that show no appreciable absorption
+*without* ionisation at the relevant frequency (absorbed-but-not-ionising
+channels would spoil the count). This one-quantum-one-molecule accounting is
+the **photochemical equivalence law**, which Einstein formalized in 1912
+(now called the Stark–Einstein law) and which underlies all quantitative
 photochemistry — quantum yields, actinometry, photosynthesis efficiency
 measurements, photographic sensitometry.
 
@@ -1076,14 +1283,77 @@ photon budget in astronomy and quantum communication (§6).
   matching this paper's equation (8.1) under the dictionary $(R/N)\beta\nu \to \hbar\omega$
   and $P \to \hbar\omega_A$. Greiner's Compton-effect section (§1.2) is the
   1923 sequel that ended the resistance chronicled above.
-- **Greiner ch. 2** ([notes](../../text/ch02-radiation-laws/notes.md)) derives
-  everything this paper *assumes* about radiation: Rayleigh–Jeans by mode
-  counting (§2.3; Einstein's §1 gets the same law via resonators), Planck's
-  law (§2.4–2.5; compare Einstein's deliberate avoidance of its derivation in
-  1905), and the Wien limit (the regime of this paper's §§4–6). The
-  dimensionless variable $x = \hbar\omega/k_B T$ developed at the start of
-  the ch. 2 notes is exactly Einstein's $\beta\nu/T$; "Wien regime" = large $x$ =
-  expensive quanta = dilute, independent photons.
 - Conventions differ: Greiner uses angular frequency $\omega = 2\pi\nu$ and
   writes spectral densities per $d\omega$; this paper uses $\nu$ and
-  densities per $d\nu$. All conversions ride on $h\nu = \hbar\omega$.
+  densities per $d\nu$. All conversions ride on $h\nu = \hbar\omega$ and
+  $\varrho(\omega) d\omega = \rho_\nu d\nu$.
+
+### Mapping this paper onto Greiner ch. 2
+
+Greiner ch. 2 ([notes](../../text/ch02-radiation-laws/notes.md)) derives
+everything this paper *assumes* about radiation, so the two texts interlock
+almost section by section. Reading them side by side is worth the trouble —
+each fills the other's gaps.
+
+- **The master variable is the same.** The dimensionless
+  $x = \hbar\omega/k_B T$ developed at the start of the ch. 2 notes (the
+  "price-to-budget ratio") is exactly Einstein's $\beta\nu/T$. Every regime
+  statement in the paper translates instantly: classical/Rayleigh–Jeans
+  validity (this paper's §§1–2) is $x \ll 1$; Wien validity (§§4–6) is
+  $x \gg 1$. Einstein's strategy — trust the law at small $x$, mine the
+  physics at large $x$ — is a walk along Greiner's opening figure from left
+  to right.
+- **Paper §1 vs Greiner §2.3 — two roads to Rayleigh–Jeans.** Greiner counts
+  the electromagnetic **modes of the cavity** ($8\pi\nu^2/c^3$ per unit
+  volume and frequency) and hands each mode the equipartition energy $k_B T$.
+  Einstein instead hands $k_B T$ to each material **resonator** and imports
+  Planck's resonator–field equilibrium relation (1.2) — in which the mode
+  count is hiding: the $8\pi\nu^2/L^3$ in (1.2) *is* Greiner's mode density.
+  Same law, same divergence; but Einstein's route needs no commitment about
+  what "counting modes of the ether" means, only orthodox mechanics plus
+  orthodox electrodynamics — which is what makes his §1 read as an
+  indictment rather than a calculation.
+- **Paper §2 vs Greiner §§2.4–2.5 — a pointed contrast in method.** Greiner
+  *derives* Planck's law twice: §2.4 via Einstein's own 1917 A/B-coefficient
+  argument, §2.5 via Planck's oscillator-energy counting. Einstein in 1905
+  pointedly derives it **zero** times — he uses Planck's formula purely as an
+  empirical fit and trusts only its classical corner. The historical arc is
+  worth savoring: the 1917 derivation that Greiner teaches is the same author
+  finally deriving, from quantised matter *plus his own light quanta*, the
+  law he refused to lean on in 1905.
+- **Wien's law's status.** In Greiner ch. 2, Wien's law appears as the
+  high-frequency limit of Planck's law and as a historical stepping stone. In
+  this paper it is the *load-bearing input*: §§4–6 are built entirely inside
+  its domain of validity. If you've internalized Greiner's
+  $\bar n = 1/(e^x - 1)$, you know *why* that domain is special: for
+  $x \gg 1$ the mean occupation per mode is $\bar n \approx e^{-x} \ll 1$ —
+  far less than one photon per mode. Photons that never share a mode never
+  exhibit their bosonic correlations, which is exactly why Einstein's
+  independent-particle reading (§6) comes out clean there, and why it *had*
+  to fail (interestingly, not trivially) elsewhere.
+- **Paper (6.4) vs Greiner §2.7 — the displacement law in disguise.**
+  Einstein's average thermal quantum $3(R/N)T$ is the Wien-approximation
+  fingerprint of Wien's displacement law: maximizing $\nu^3 e^{-\beta\nu/T}$
+  gives $\beta\nu/T = 3$, while Greiner's full-Planck peak condition
+  $x = 3(1 - e^{-x})$ gives $x \approx 2.82$. The 6% difference between 3
+  and 2.82 is precisely the bosonic $-1$ in Planck's denominator — i.e. the
+  photon bunching that the Wien regime suppresses.
+- **Frequency slices, two uses.** Greiner's §2.6 (Stefan–Boltzmann) gets the
+  total energy density $E/V = aT^4$ by *summing* Planck's law over all
+  frequency slices (mode density × Bose–Einstein occupation × $\hbar\omega$,
+  then integrate). Einstein's §§3–4 keep the slices *separate* and do
+  thermodynamics on each one — entropy density $\varphi(\rho,\nu)$ per slice,
+  with (3.3) as the slice-wise version of $dS = dE/T$. Integration destroys
+  exactly the information Einstein needs (which frequency the energy sits
+  at), which is why his equations carry a $d\nu$ that then cancels in the
+  entropy *difference* (4.5). If ch. 2 left you comfortable assigning $S$ and
+  $T$ to light at all, Einstein's §3 will feel natural.
+- **What the paper adds that ch. 2 doesn't.** Greiner (following the
+  textbook tradition) presents $E = \hbar\omega$ as Planck's postulate
+  inherited by Einstein. The 1905 paper shows something stronger and rarely
+  taught: the quantum of *free radiation* can be read directly out of the
+  measured spectrum by thermodynamic reasoning, without Planck's postulate,
+  without resonators, and without any model of matter at all. Conversely,
+  ch. 2 supplies what the paper (by design) lacks: the full Planck law's
+  derivation and the mode picture that eventually reconciles quanta with
+  waves.

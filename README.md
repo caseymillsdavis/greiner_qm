@@ -60,7 +60,7 @@ the chapters.
 
 | Paper | Related chapters | Status |
 |-------|------------------|--------|
-| [Einstein (1905) — On a Heuristic Point of View about the Creation and Conversion of Light](papers/einstein-1905-photoelectric/notes.md) | Ch. 1 (light quanta), Ch. 2 (radiation laws) | Notes complete, all nine sections + intro |
+| [Einstein (1905) — On a Heuristic Point of View about the Creation and Conversion of Light](papers/einstein-1905-photoelectric/notes.md) | Ch. 1 (light quanta), Ch. 2 (radiation laws) | Notes complete (all nine sections + intro), checked against the AJP (1965) translation |
 
 ## Working with Claude
 
