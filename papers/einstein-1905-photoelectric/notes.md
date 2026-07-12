@@ -313,7 +313,9 @@ thought — it is the exact point where classical physics dies.
 shown (1900, by an entirely classical calculation of a small damped
 oscillating charge driven by random radiation) that at equilibrium the
 resonator's mean energy and the spectral energy density $\rho_\nu$ of the
-surrounding radiation must satisfy
+surrounding radiation must satisfy — and note this is *not* Planck's
+radiation law, which enters only in §2; it is a temperature-free statement
+of classical electrodynamics —
 
 $$
 \bar E_\nu = \frac{L^3}{8\pi\nu^2}\rho_\nu, \qquad (1.2)
@@ -353,6 +355,44 @@ between matter and radiation is impossible in classical physics.
   territory: equipartition is the core of the kinetic theory that explains
   gases; relation (1.2) is straight Maxwell. There is no third theory in 1905
   to blame. Either mechanics or electrodynamics (or both) must fail somewhere.
+- *"Why bother with equipartition at all — doesn't Planck's expression
+  already show the high-frequency problem?"* A name collision trips many
+  readers here: two different things called "Planck" are in play. Equation
+  (1.2) is Planck's **resonator–field relation** — classical electrodynamics
+  — and is *not* Planck's radiation law (that is (2.1), which enters only in
+  §2). The relation contains no temperature: it is one equation linking two
+  unknowns, saying only that resonator energy and field density sit in a
+  fixed ratio at equilibrium. It cannot say how much energy either has at
+  temperature $T$. And Planck's radiation *law* shows no problem at high
+  frequency — it is finite, integrable, and fits the data everywhere; it is
+  the answer, not the problem. The divergence appears only when you ask what
+  *classical theory predicts* for the resonator energy at temperature $T$,
+  and classical statistical mechanics has exactly one answer: equipartition,
+  $(R/N)T$ per oscillator, blind to frequency. That mechanical input is the
+  load-bearing — and guilty — ingredient. Relation (1.2) then merely
+  converts "same energy at every frequency" into the $\nu^2 T$ spectrum,
+  and the integral (1.4) blows up. Equipartition is not garnish; it is the
+  only thermodynamic anchor classical physics can supply.
+- *"Doesn't the argument secretly need thermal energy per field mode?
+  Einstein never says that."* Correct — and deliberately so. Assigning $k_B T$ to
+  each electromagnetic mode is the Rayleigh–Jeans route (Greiner §2.3).
+  Einstein instead applies equipartition only to a **material oscillator** —
+  a bound electron colliding with gas molecules — where kinetic theory's
+  authority was beyond dispute. He never assigns energy to field modes,
+  never counts them, and never has to defend treating the ether's infinitely
+  many degrees of freedom as equipartition recipients — a genuinely
+  contested move in 1905 (Jeans, for one, tried to escape the catastrophe by
+  arguing that the high-frequency modes simply never reach equilibrium).
+  One resonator per frequency is enough — hence Einstein's aside that
+  oscillators "of all the relevant frequencies" must be present — because
+  each resonator, through the purely electrodynamic relation (1.2), pins the
+  field density at its own frequency. The per-mode structure is *hidden
+  inside (1.2)*: its factor $8\pi\nu^2/L^3$ is exactly the field's mode
+  density. So the result reads as if every mode carried $(R/N)T$ — but in
+  Einstein's version that is a corollary, not an assumption. This is what
+  upgrades §1 from a calculation with disputable inputs to an indictment:
+  to dodge the conclusion you must break either kinetic gas theory or
+  Maxwell's electrodynamics; there is no third assumption to sacrifice.
 - *"Ultraviolet catastrophe"* — the famous name is **not** in this paper; it
   was coined by Ehrenfest in 1911. Also note the history is commonly told
   backwards: this divergence played almost no role in Planck's own path in
