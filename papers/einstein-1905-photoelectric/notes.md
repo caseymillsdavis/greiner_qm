@@ -924,6 +924,48 @@ for **any** radiation, equilibrium or not. The measured black-body curve
 becomes a machine for assigning entropy to arbitrary monochromatic radiation.
 That inversion — spectrum in, entropy out — is the trick that makes §4 possible.
 
+**Why "any radiation," though?** The derivation of (3.3) used black-body
+radiation throughout, so the claim just made deserves a moment of
+suspicion: how did equilibrium-only input buy a formula valid *out of*
+equilibrium? Three ingredients.
+
+1. *One fixed function, self-contained slices.* By the ansatz (3.1) —
+   Claims 1 and 3 of the "why this form" section — a slice's entropy
+   depends only on its own contents, the pair ($\rho$, $\nu$): not on what
+   the rest of the spectrum looks like, and not on any "equilibrium" label.
+   A slice of density $\rho$ at frequency $\nu$ carries entropy
+   $\varphi(\rho,\nu) d\nu$ per unit volume whether it sits inside a full
+   black-body spectrum or floats alone in a cavity (the reversible prism
+   argument again: extract the slice and its entropy rides along
+   unchanged). So determining $\varphi$ *anywhere* determines it for
+   isolated monochromatic radiation too. Notice that the reach beyond
+   equilibrium is **bought by the assumption, not derived** — which is
+   exactly why Einstein's footnote conceded the ansatz is "arbitrary."
+2. *The equilibrium family scans the whole domain.* At fixed $\nu$, the
+   black-body density $\rho(\nu, T)$ increases monotonically with $T$, so
+   each point ($\rho$, $\nu$) of the plane is *realized* by equilibrium
+   radiation at exactly one temperature: invert the measured law to get
+   $T(\rho, \nu)$. Equation (3.3) is therefore a statement at **every**
+   point of $\varphi$'s domain — not just along one curve — and integrating
+   in $\rho$ at fixed $\nu$, from $\varphi(0) = 0$, pins $\varphi$
+   everywhere. (Without this coverage, equilibrium data would determine
+   $\varphi$ only on a one-dimensional sliver of its domain.)
+3. *A single slice is never "out of equilibrium" internally.* Its state is
+   one number, $\rho$, so there is always some temperature whose black-body
+   spectrum would contain exactly this slice — its **effective
+   temperature**, which is what (3.3) assigns. Being out of equilibrium is
+   a *relation between slices*: different effective temperatures at
+   different frequencies. "Any radiation" thus means: arbitrary per-slice
+   effective temperatures, total entropy the sum of per-slice pieces.
+
+A homely analogy: measure the heat capacity of water across a range of
+temperatures — equilibrium calorimetry, nothing else — and you can
+thereafter assign an entropy to a bathtub that is hot at one end and cold
+at the other, by integrating the local entropy density along the tub. The
+equilibrium experiments determine the *function*; the function then
+evaluates on non-equilibrium *configurations*. Einstein's inversion is the
+same move, with frequency playing the role of position.
+
 **Sticking points.**
 
 - *Can pure radiation have a temperature and entropy at all?* Strictly,
