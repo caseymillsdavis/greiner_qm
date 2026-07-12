@@ -840,15 +840,79 @@ entropy has diminishing returns in energy — which is also *why* the
 moving energy from a low-price bin to a high-price bin is always favorable
 until the prices equalize.
 
-**Identifying the constant with 1/T.** Add heat $dE$ reversibly to black-body
-radiation at fixed volume. Thermodynamics says $dS = dE/T$. Computing $dS$
-from (3.1) slice by slice and using the fact that $\partial\varphi/\partial\rho$
-is the same for all slices, the multiplier drops out in front:
+**Identifying the constant with 1/T.** This is the paragraph that begins,
+in the translation, "The following equation applies when the temperature of
+a unit volume of blackbody radiation increases by $dT$" (in the German:
+"Für die Temperaturzunahme $dT$ ..."). Einstein writes down, without
+derivation,
 
 $$
-dS = \int_0^\infty \frac{\partial\varphi}{\partial\rho} dE_\nu
-   = \frac{\partial\varphi}{\partial\rho} dE
+dS = \int_0^\infty \frac{\partial\varphi}{\partial\rho} d\rho d\nu, \qquad (3.3a)
+$$
+
+then pulls the frequency-independent derivative out front and compares with
+thermodynamics. Let's supply the missing derivation, then rerun his
+comparison.
+
+*Where (3.3a) comes from: the chain rule along the family of black-body
+spectra.* Work per unit volume ($V = 1$, as Einstein specifies). At
+temperature $T$ the equilibrium spectrum is $\rho(\nu, T)$; heat the
+radiation to $T + dT$ and every slice's density moves by a definite amount,
+
+$$
+d\rho(\nu) = \frac{\partial\rho(\nu,T)}{\partial T} dT
+$$
+
+— the vertical gap between the black-body curves at $T$ and at $T + dT$,
+frequency by frequency. The entropy (3.1) responds through each slice.
+Differentiating under the integral sign with the chain rule — and noting
+that only the *first* slot of $\varphi(\rho,\nu)$ moves, since the second
+slot is the integration label $\nu$, which heating does not touch —
+
+$$
+S(T) = \int_0^\infty \varphi\left(\rho(\nu,T), \nu\right) d\nu
 \quad\Longrightarrow\quad
+\frac{dS}{dT} = \int_0^\infty \frac{\partial\varphi}{\partial\rho} \frac{\partial\rho}{\partial T} d\nu,
+$$
+
+and multiplying through by $dT$ and recognizing
+$(\partial\rho/\partial T) dT = d\rho(\nu)$ gives exactly (3.3a). In the
+bin picture of the refresher above, this is bare multivariable calculus:
+$S = \sum_i \varphi(\rho_i, \nu_i)\Delta\nu$ is an ordinary function of the
+list $(\rho_1, \ldots, \rho_M)$; heating nudges the list by
+$(d\rho_1, \ldots, d\rho_M)$; the first-order change is
+$\sum_i (\partial\varphi/\partial\rho) d\rho_i \Delta\nu$. So (3.3a) is
+nothing new — it is the general variation formula (3.2a), evaluated on the
+one particular nudge that heating happens to produce. That also explains
+the division of labor between the two kinds of "d": the **partial**
+$\partial\varphi/\partial\rho$ appears because $\varphi$ has two slots and
+only the first one changes; the **totals** $dS$, $dT$, $d\rho$ are actual
+changes in the physical heating process. (And note the chain-rule step is
+valid for *any* small perturbation of *any* spectrum; the black-body
+specialization has not been used yet — it enters only in the next two
+moves.)
+
+*The comparison.* Two facts now collapse the integral. First, for
+black-body radiation $\partial\varphi/\partial\rho$ has the same value in
+every slice — that was the variational result (3.2) — so it pulls out
+front:
+
+$$
+dS = \frac{\partial\varphi}{\partial\rho}\int_0^\infty d\rho d\nu
+   = \frac{\partial\varphi}{\partial\rho} dE,
+$$
+
+where $dE = \int d\rho d\nu$ is the total energy added per unit volume.
+Second, that added energy is *pure heat*, delivered *reversibly*: the
+cavity walls are rigid, so no volume change and the radiation pressure does
+no work ($dE$ has no $p dV$ piece to subtract); and we may imagine warming
+the cavity by contact with a reservoir only infinitesimally hotter — a
+quasi-static, reversible path. (Entropy is a state function, so computing
+$dS$ along this one convenient path settles it for every process between
+the same endpoints.) For reversible heat transfer, thermodynamics says
+$dS = dE/T$. Comparing the two expressions for $dS$:
+
+$$
 \frac{\partial\varphi}{\partial\rho} = \frac{1}{T}. \qquad (3.3)
 $$
 
