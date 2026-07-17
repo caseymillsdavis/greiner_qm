@@ -30,6 +30,13 @@ When given one or more screenshots from the text:
   (`p045.png`, `sec-2.3-p045.png`).
 - Generated or extracted diagrams go in `figures/`.
 - Expanded notes go in `notes.md`.
+- **GitHub caps math rendering at roughly 1000 expressions per page** — every
+  expression past the cap shows "Unable to render expression", even though the
+  LaTeX is valid. Each `$...$` span and each `$$...$$` block counts as one
+  expression. When a chapter's `notes.md` approaches ~800 expressions, split it
+  at a section boundary into `notes.md` (part 1) and `notes2.md` (part 2), with
+  a short note and cross-links at the top of each part and a "continued in
+  part 2" pointer at the bottom of part 1 (see `text/ch03-wave-aspect-of-matter/`).
 
 ### Notes format (Markdown)
 - Use `##` for sections, `###` for subsections; mirror the book's structure.

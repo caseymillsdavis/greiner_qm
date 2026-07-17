@@ -51,7 +51,7 @@ PDF if a polished build is ever wanted.
 |---------|-------|--------|
 | [1](text/ch01-quantization-of-physical-quantities/notes.md) | The Quantization of Physical Quantities | Notes complete (pp. 1–11), figures included |
 | [2](text/ch02-radiation-laws/notes.md) | Radiation Laws (*Strahlungsgesetze*) | Notes complete (pp. 12–36); figures pending |
-| [3](text/ch03-wave-aspect-of-matter/notes.md) | The Wave Aspect of Matter (*Der Wellenaspekt der Materie*) | Notes complete (pp. 37–83), figures included |
+| [3](text/ch03-wave-aspect-of-matter/notes.md) | The Wave Aspect of Matter (*Der Wellenaspekt der Materie*) | Notes complete (pp. 37–83), figures included; in two parts ([1: §3.1–3.14](text/ch03-wave-aspect-of-matter/notes.md), [2: §3.15–end](text/ch03-wave-aspect-of-matter/notes2.md)) to stay under GitHub's per-page math-rendering cap |
 
 ## Papers
 
