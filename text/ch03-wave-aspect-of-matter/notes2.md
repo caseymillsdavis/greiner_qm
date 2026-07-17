@@ -786,6 +786,35 @@ interference structure coming from superposing rays *within* one slit — that
 structure overlays the diffraction picture, and the full calculation below
 includes it.
 
+> **Aside — this is the Fraunhofer approximation (and where parallel rays
+> "meet").** The whole supplement assumes plane-wave illumination (one common
+> $\alpha$ for every slit) and computes the amplitude per outgoing *direction*
+> $\beta$ — both halves of the Fraunhofer (far-field) setup. That raises a fair
+> question: two parallel rays never cross at finite distance, so how do they
+> interfere, and where does a path difference come from? Answer: they are
+> brought together "at infinity" — either a screen so distant that rays
+> arriving at one point are effectively parallel, or (the standard trick) a
+> converging lens behind the grating, which maps each direction $\beta$ to one
+> point of its focal plane. The path difference, meanwhile, is accumulated
+> entirely **between two wavefronts at the grating**, not en route to the
+> screen. From the incident wave's common plane wavefront, the ray aimed at the
+> grating point a distance $\xi$ farther along must travel an extra
+> $\xi\sin\alpha$ to reach the grating; projecting the two outgoing parallel
+> rays onto a common outgoing wavefront (a plane perpendicular to the
+> $\beta$-direction) costs the other ray $\xi\sin\beta$. Past that wavefront
+> the parallel rays stay in lockstep — a lens adds equal optical path from any
+> wavefront to its focus (Fermat), so nothing more accumulates. Hence
+> $\Delta = \xi(\sin\alpha - \sin\beta)$, with no screen distance in it — which
+> is why the phase (g2) below depends on grating geometry alone. Check: at
+> $\beta = \alpha$ (straight through, $m = 0$) the projections cancel and all
+> rays are in phase, as they must be. Quantitatively, the exact distance from
+> grating point $\xi$ to a screen point at distance $R$ expands as
+> $r \approx R - \xi\sin\beta + \xi^2\cos^2\beta/2R + \cdots$; Fraunhofer keeps
+> only the linear term, valid when the dropped quadratic shifts phases by much
+> less than a wavelength across the whole grating: $R \gg (Nd)^2/\lambda$.
+> Closer in (Fresnel regime) the wavefront curvature matters and the product
+> formula (g6) no longer holds.
+
 ### The finite grating: amplitude by superposition
 
 Now the real case: slit width $a$, slit spacing $d$, slit count $N$. We
