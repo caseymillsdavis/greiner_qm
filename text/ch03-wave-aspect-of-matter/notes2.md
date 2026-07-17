@@ -797,13 +797,23 @@ includes it.
 > converging lens behind the grating, which maps each direction $\beta$ to one
 > point of its focal plane. The path difference, meanwhile, is accumulated
 > entirely **between two wavefronts at the grating**, not en route to the
-> screen. From the incident wave's common plane wavefront, the ray aimed at the
-> grating point a distance $\xi$ farther along must travel an extra
-> $\xi\sin\alpha$ to reach the grating; projecting the two outgoing parallel
-> rays onto a common outgoing wavefront (a plane perpendicular to the
-> $\beta$-direction) costs the other ray $\xi\sin\beta$. Past that wavefront
-> the parallel rays stay in lockstep — a lens adds equal optical path from any
-> wavefront to its focus (Fermat), so nothing more accumulates. Hence
+> screen. Each "extra path" is measured *along the ray's own direction of
+> travel*, between two reference planes drawn perpendicular to the rays —
+> surfaces of constant phase (phase accumulates only for distance covered
+> along the propagation direction; sliding sideways within a wavefront costs
+> nothing). Concretely, for two slits $\xi$ apart along the grating (angles
+> measured from the grating normal, the dashed line in the figure): the
+> **starting line** is the incident wavefront through the lower slit — both
+> rays cross it in phase, and the ray bound for the farther slit still has to
+> cover the projection of the slit offset onto its flight direction,
+> $\xi\sin\alpha$ (the small triangle marked $d\sin\alpha$ in the figure, its
+> leg lying along the incident ray). The **finish line** is the outgoing
+> wavefront, perpendicular to the $\beta$-direction, through the farther slit:
+> reaching it costs the other ray $\xi\sin\beta$ (the $d\sin\beta$ triangle).
+> Past the finish line the parallel rays add *identical* lengths to the
+> distant screen — a lens adds equal optical path from any wavefront to its
+> focus (Fermat) — so nothing more accumulates: the entire inequality lives in
+> the two slanted little legs at the grating. Hence
 > $\Delta = \xi(\sin\alpha - \sin\beta)$, with no screen distance in it — which
 > is why the phase (g2) below depends on grating geometry alone. Check: at
 > $\beta = \alpha$ (straight through, $m = 0$) the projections cancel and all
