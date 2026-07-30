@@ -2455,6 +2455,74 @@ $\lambda = 5893\ \text{Å}$) needs $\lambda/\Delta\lambda \approx 1000$ — so
 the first-order lines can be separated with a grating of $1000$ lines; if one
 settles for the weaker second-order maxima, $500$ lines suffice.
 
+### Aside — the grating performs a Fourier transform, physically
+
+Everything in this supplement can be compressed into one sentence: **the
+far-field diffraction pattern is the Fourier transform of the grating's
+transmission function, and the interference itself carries out the
+integral.** Making this explicit is worth the detour, because it unifies
+(g1), (g6) and the resolving power into a single statement — and it connects
+this classical calculation to the position–momentum Fourier pair of §3.16.
+
+Define the **transmission function** $T(\xi)$ of the grating: $T = 1$ where
+$\xi$ falls inside a slit, $T = 0$ where it falls on an opaque strip. Then
+the sum of slit integrals (g3) is exactly one integral over the whole
+grating,
+
+$$
+u(\beta) \sim \int_{-\infty}^{\infty} T(\xi)\ e^{iq\xi}\ d\xi = \tilde T(q), \qquad q \equiv \frac{2\pi(\sin\alpha - \sin\beta)}{\lambda} \qquad (\mathrm{g}10)
+$$
+
+— the **Fourier transform of the aperture**, evaluated at the single spatial
+frequency $q$ that the observation direction $\beta$ picks out. The screen,
+recording $I \sim |\tilde T(q)|^2$, displays the power spectrum of the
+grating, one frequency per angle.
+
+**Where the "computation" happens.** No component of the apparatus knows the
+whole answer. Each point $\xi$ of the grating re-radiates a wavelet
+(Huygens); propagation to a distant detector sitting in direction $\beta$
+weights that wavelet by precisely the phase factor $e^{iq\xi}$ of (g2); and
+the detector adds the arrivals coherently. The physical superposition *is*
+the Fourier integral, evaluated term by term by interference — an analog
+computer whose "clock speed" is the speed of light. That is the microscopic
+content of the slogan that a bunch of slits "conducts a Fourier transform."
+
+The structure of the result follows from the **convolution theorem**. The
+$N$-slit transmission is a single-slit box of width $a$ convolved with a row
+of $N$ points at spacing $d$:
+
+$$
+T = (\text{box of width } a) \ast (\text{comb of } N \text{ points, spacing } d)
+$$
+
+A Fourier transform turns convolution into a product, so $\tilde T$
+factorizes — and (g6) is that factorization, read directly off the screen:
+
+- the box transforms into the envelope $\sin\gamma/\gamma$ (first factor);
+- the finite comb transforms into the Dirichlet kernel
+  $\sin N\delta/\sin\delta$ (second factor).
+
+The opening argument about the **infinite** grating is the $N \to \infty$
+limit: the comb becomes an ideal periodic comb, whose Fourier transform is
+again a comb, with reciprocal spacing $2\pi/d$. Perfectly sharp lines at
+$\delta = m\pi$ — condition (g1) — are the statement that *the Fourier
+transform of a lattice is a lattice*: the diffraction orders are nothing but
+the one-dimensional reciprocal lattice, the same object behind the Bragg
+peaks of §3.6.
+
+Even the **resolving power** is a Fourier statement. A transform computed
+from a record of finite length $L = Nd$ cannot distinguish frequencies
+closer than $|\Delta q| \approx 2\pi/(Nd)$ — the transform of the
+finite-length window smears every line by that much. Translating $\Delta q$
+back through the definition of $q$ in (g10) reproduces (g9), hence
+$\lambda/|\Delta\lambda| = mN$. This "finite record length limits frequency
+resolution" theorem is *the same mathematics* as the uncertainty relation:
+in §3.22 the grating measures the momentum of a matter wave by physically
+Fourier-analyzing it over the window $Nd$ it occupies, and paid
+$\Delta p\ \Delta s > h$ for it. The classical spectroscopist and the
+quantum mechanic are invoking one and the same property of the Fourier
+transform — a wave train and its spectrum cannot both be short.
+
 > **Why this supplement earns its place here.** Equation (g6) is the same
 > $\sin^2 N\delta/\sin^2\delta$ machinery that governs Bragg peaks from a
 > crystal ($N$ lattice planes) in §3.6 — and the finite-$N$ peak width
